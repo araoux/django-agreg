@@ -1,0 +1,23 @@
+{% extends "squelette.html" %}
+{% block title %}Ressources{% endblock %}
+{% block content %}
+
+<h1>Se connecter</h1>
+
+Pour déposer une candidature, vous devez créer un compte ou vous connecter
+<form action={% url "connexion" %} method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Se Connecter" />
+</form>
+
+<h1>Candidature</h1>
+
+
+<form action={% url "recherche" %} method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+
+{% endblock %}

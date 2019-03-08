@@ -1,0 +1,65 @@
+{% extends "squelette.html" %}
+{% block title %}Ressources{% endblock %}
+{% block content %}
+<h1>Catalogue de ressources</h1>
+
+
+<form action={% url "recherche" %} method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+
+{% if show_result %}
+{{filtres_definis}}<br />
+{{filtres.mot_cle}}<br />
+{{test}}
+<hr>
+<h2> Liste des liens</h2>
+
+<article class='center'>
+<table id="table_resultats_recherche">
+  <tr>
+   <th>Ressource</th><th>Discipline</th><th>Catégorie</th><th>Sous-catégorie</th><th>Oraux</th>
+  </tr>
+
+{% for ressource in liste_liens %}
+    <tr>
+     <td><a href="{{ ressource.contenu }}">{{ressource.description}}</a></td>
+     <td>{{ressource.discipline}}</td>
+     <td>{{ressource.categorie}}</td>
+     <td>{{ressource.sous_cat}}</td>
+     <td>{% for oral in ressource.oral.all %} {{oral.agreg}} - {{oral.type_oral}} - {{oral.numero}} : {{oral.nom}} <br /> {% endfor %}</td>
+{% endfor %}
+
+</table>
+</article>
+
+<hr>
+<h2> Liste des images</h2>
+
+<article class='center'>
+<table id="table_resultats_recherche">
+  <tr>
+   <th>Ressource</th><th>Discipline</th><th>Catégorie</th><th>Sous-catégorie</th><th>Oraux</th>
+  </tr>
+
+{% for ressource in liste_images %}
+    <tr>
+     <td><a href="{{ ressource.contenu.url }}"><img src="{{ ressource.contenu.url }}" width='400px' /></a></td>
+     <td>{{ressource.discipline}}</td>
+     <td>{{ressource.categorie}}</td>
+     <td>{{ressource.sous_cat}}</td>
+     <td>{% for oral in ressource.oral.all %} {{oral.agreg}} - {{oral.type_oral}} - {{oral.numero}} : {{oral.nom}} <br /> {% endfor %}</td>
+{% endfor %}
+
+</table>
+</article>
+
+
+
+
+{% endif %}
+
+
+{% endblock %}

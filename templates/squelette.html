@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+{% load static %}
+
+<head>
+   <title>{% block title %}Le futur site{% endblock %}</title>
+
+  <meta charset="utf-8" />
+  <meta name="description" content="Centre de préparation à l'agrégation de physique de Montrouge">
+  <meta name="keywords" content="agrégation, physique, ENS, UPMC, Paris-Sud">
+  <meta name="generator" content="PHP/<? phpversion(); ?>" />
+  <meta name="author" content="Arnaud Raoux" />
+  <meta name="copyright" content="ENS" />
+  <link rel="icon" type="image/png" href={% static "favicon.png" %} />
+  <link rel="stylesheet" href={% static "/style2.css" %} type="text/css"  />
+  
+</head>
+
+<body>
+<header>
+  <div id='bandeau_div'>
+    <div class='logo_div'>
+      <a href="http://www.ens.fr/"><img class='logo' src={% static "/ens.png"%} alt='logo_ens'/></a>
+      <a href="http://www.phys.ens.fr/"><img class='logo' src={% static "phys.png"%} alt='logo_dpt_physique' /></a>
+    </div>
+    <div id='titre_div'>
+      Centre de Préparation de Montrouge <br /> Agrégation de Physique
+    </div>
+    <div class='logo_div'>
+      <a href="https://www.sorbonne-universite.fr/"><img class='logo' src={% static "P6.jpg" %} alt='logo_SU' /></a>
+      <a href="http://www.u-psud.fr/fr/index.html"><img class='logo' src={% static "P11.jpg" %} alt='logo_UPSUD' /></a>
+    </div>
+  </div>
+
+  
+  <nav id='nav_header'>
+    {% block nav %}
+    <hr/>
+    <ul id='nav_ul'>
+      <a href='https://poisson.ens.fr/index.php'><li>Accueil</li></a>
+      <a href='https://poisson.ens.fr/formation.php'><li>Formation</li></a>
+      <a href='https://poisson.ens.fr/candidater.php'><li>Candidater</li></a>
+      <a href='https://poisson.ens.fr/infos.php'><li>Informations</li></a>
+      <a href='https://poisson.ens.fr/collection.php'><li>Matériel</li></a>
+      <a href='https://poisson.ens.fr/Intranet/Wiki/index.php'><li>Wiki</li></a>
+    </ul>
+    {% endblock %}
+  </nav>
+<!--<hr/>-->
+</header>
+
+   <section id="content">
+       {% block content %}{% endblock %}
+   </section>
+
+<br />
+<hr />
+<!--<?php require_once('connexion.php');?>-->
+<hr />
+<br />
+
+<footer>
+<h3>Centre interuniversitaire de préparation à l'agrégation de sciences physiques &mdash; option physique</h3>
+<h4>ENS Ulm &mdash; Sorbonne Université &mdash; Université Paris-Sud</h4>
+<!--<h4>contact : <?php afficher_email('agregation','phys.ens.fr'); ?></h4>-->
+</footer>
+
+</body>
+</html>
