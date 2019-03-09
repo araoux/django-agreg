@@ -8,16 +8,16 @@ class RessourceForm(forms.ModelForm):
     
     class Meta:
         model = Ressource
-        
-        widgets = {
-            'mots_cles': forms.Textarea(attrs={'cols': 15, 'rows': 1}),
-           # 'oral':forms.Select(),
-        }
+#        
+#        widgets = {
+#            'mots_cles': forms.Textarea(attrs={'cols': 15, 'rows': 1}),
+#           # 'oral':forms.Select(),
+#        }
         fields = ['discipline','categorie', 'sous_cat']#, 'oral', 'mots_cles']
     def __init__(self, *args, **kwargs):
         super(RessourceForm, self).__init__(*args, **kwargs)
-        self.fields['discipline'].required = False
-        self.fields['categorie'].required = False
+        self.fields['discipline'].required = True
+        self.fields['categorie'].required = True
         self.fields['sous_cat'].required = False
         #self.fields['oral'].required = False
         #self.fields['mots_cles'].required = False
@@ -32,6 +32,6 @@ class RessourceParOralForm(forms.ModelForm):
         
     def __init__(self, *args, **kwargs):
         super(RessourceParOralForm, self).__init__(*args, **kwargs)
-        self.fields['agreg'].required = False
-        self.fields['type_oral'].required = False
-        self.fields['numero'].required = False
+        self.fields['agreg'].required = True
+        self.fields['type_oral'].required = True
+        self.fields['numero'].required = True

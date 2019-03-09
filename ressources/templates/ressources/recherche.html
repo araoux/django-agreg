@@ -3,25 +3,36 @@
 {% block content %}
 <h1>Recherche de ressources</h1>
 
-<h2>Par thématique</h2>
-<form action={% url "recherche" %} method="post">
+<article class='recherche'>
+
+<form action={% url "recherche_tous" %} method="post">
     {% csrf_token %}
+<h3 style="display:inline">Toutes les ressources : </h3><input style="display:inline" type="submit" name="RechercheTous" value="Afficher" />
+</form>
+</article>
+
+<article class='recherche'>
+<form action={% url "recherche_categorie" %} method="post">
+    {% csrf_token %}
+    <h3 style="display:inline">Par thématique : </h3>
     {{ form.as_table }}
-    <input type="submit" name="RechercheParCategorie" value="Rechercher" />
+    <input style="display:inline" type="submit" name="RechercheParCategorie" value="Rechercher" />
 </form>
+</article>
 
-<h2>Par oral</h2>
-<form action={% url "recherche" %} method="post">
+<article class='recherche'>
+<form action={% url "recherche_oral" %} method="post">
     {% csrf_token %}
+    <h3 style="display:inline">Par oral : </h3>
     {{ form2.as_table }}
-    <input type="hidden" name="Recherche" value="ParOral"/>
-    <input type="submit" name="RechercheParOral" value="Rechercher" />
+    <input style="display:inline" type="submit" name="RechercheParOral" value="Rechercher" />
 </form>
+</article>
 
+umoinsunresultat = {{aumoinsunresultat}}<br />
+show_results = {{show_results}}<br />
 
-{% if show_result %}
-    aumoinsunresultat = {{aumoinsunresultat}}<br />
-    show_resultat = {{show_result}}<br />
+{% if show_results %}
     oral = {{oral}}<br />
     filtres_definis = {{filtres_definis}}<br />
     fitlres_mots-cles = {{filtres.mot_cle}}<br />

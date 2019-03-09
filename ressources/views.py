@@ -6,14 +6,20 @@ from .models import Ressource, RessourceLien, RessourceScript, RessourceImage, R
 
 from .forms import RessourceForm, RessourceParOralForm
 
-def recherche(request):
+def accueil(request):
+    form = RessourceForm(None)
+    form2 = RessourceParOralForm(None)
+    
+    return render(request, 'ressources/recherche.html',locals())
+    
+def recherche_categorie(request):
     # Construire le formulaire, soit avec les données postées, soit vide si l'utilisateur accède pour la première fois à la page.
     form = RessourceForm(request.POST or None)
-    form2 = RessourceParOralForm(request.POST or None)
+    form2 = RessourceParOralForm(None)
     # Nous vérifions que les données envoyées sont valides. Cette méthode renvoie False s'il n'y a pas de données dans le formulaire ou qu'il contient des erreurs.
     if form.is_valid(): 
         # Ici nous pouvons traiter les données du formulaire
-        show_result = True
+        show_results = True
         formulaire = form.cleaned_data
         
         filtres = {}
@@ -28,7 +34,6 @@ def recherche(request):
         liste_scripts = RessourceScript.objects.all()
         liste_fichiers = RessourceFichier.objects.all()
 
-        
         if 'discipline' in filtres_definis:
             liste_liens = RessourceLien.objects.filter(discipline__nom=filtres['discipline'])
             liste_images = RessourceImage.objects.filter(discipline__nom=filtres['discipline'])
@@ -47,10 +52,19 @@ def recherche(request):
             liste_scripts = liste_scripts.filter(sous_cat__nom=filtres['sous_cat'])
             liste_fichiers = liste_fichiers.filter(sous_cat__nom=filtres['sous_cat'])
         
-        aumoinsunresultat = True
+        aumoinsunresultat = True ## A IMPLEMENTER
 
-    elif form2.is_valid(): 
-        show_result = True
+    # Quoiqu'il arrive, on affiche la page du formulaire.
+    return render(request, 'ressources/recherche.html', locals())
+
+def recherche_oral(request):
+    # Construire le formulaire, soit avec les données postées, soit vide si l'utilisateur accède pour la première fois à la page.
+    form = RessourceForm(None)
+    form2 = RessourceParOralForm(request.POST or None)
+    # Nous vérifions que les données envoyées sont valides. Cette méthode renvoie False s'il n'y a pas de données dans le formulaire ou qu'il contient des erreurs.
+
+    if form2.is_valid(): 
+        show_results = True
         agreg = form2.cleaned_data['agreg']
         type_oral = form2.cleaned_data['type_oral']
         numero = form2.cleaned_data['numero']
@@ -63,6 +77,21 @@ def recherche(request):
             liste_images = RessourceImage.objects.filter(oral__agreg=agreg,oral__type_oral=type_oral,oral__numero=numero)
             liste_scripts = RessourceScript.objects.filter(oral__agreg=agreg,oral__type_oral=type_oral,oral__numero=numero)
             liste_fichiers = RessourceFichier.objects.filter(oral__agreg=agreg,oral__type_oral=type_oral,oral__numero=numero)
+
+    # Quoiqu'il arrive, on affiche la page du formulaire.
+    return render(request, 'ressources/recherche.html', locals())
+
+def recherche_tous(request):
+    liste_liens = RessourceLien.objects.all()
+    liste_images = RessourceImage.objects.all()
+    liste_scripts = RessourceScript.objects.all()
+    liste_fichiers = RessourceFichier.objects.all()
+    
+    form = RessourceForm(None)
+    form2 = RessourceParOralForm(None)
+    
+    show_results = True
+    aumoinsunresultat = True
 
     # Quoiqu'il arrive, on affiche la page du formulaire.
     return render(request, 'ressources/recherche.html', locals())

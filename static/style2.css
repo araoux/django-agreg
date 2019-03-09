@@ -457,3 +457,12 @@ h2
   width:100%;
   padding:10px;
 }
+
+.recherche
+{
+  text-align:left;
+  width:80%;
+  border:solid 1px black;
+  margin: 20px auto 20px auto;
+  padding: 10px 0px 10px 10px;
+}

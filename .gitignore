@@ -1,3 +1,4 @@
 site_ressources/settings.py
 media
 db.sqlite3
+ressources/__pycache__/
