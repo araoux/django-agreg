@@ -7,7 +7,7 @@ class Centre(models.Model):
     nom = models.CharField(max_length=30,verbose_name="nom")
 
     class Meta:
-        verbose_name = "Centres"
+        verbose_name = "Centre"
     def __str__(self):
         afficher = str(self.nom)
         return afficher
@@ -23,7 +23,7 @@ class Candidat(models.Model):
     date_inscription = models.DateField()
 
     class Meta:
-        verbose_name = "Candidats"
+        verbose_name = "Candidat"
     def __str__(self):
         afficher = str(self.nom)
         return afficher
@@ -87,7 +87,7 @@ class Inscription(models.Model):
     date_inscription = models.DateField()
     
     class Meta:
-        verbose_name = "Inscriptions"
+        verbose_name = "Inscription"
 #    def __str__(self):
 #        afficher = str(self.agreg) + " " + self.type_oral + " " +  str(self.numero) + ". " + self.nom
 #        return afficher

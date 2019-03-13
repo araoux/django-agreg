@@ -22,7 +22,7 @@
 <header>
   <div id='bandeau_div'>
     <div class='logo_div'>
-      <a href="http://www.ens.fr/"><img class='logo' src={% static "/ens.png"%} alt='logo_ens'/></a>
+      <a href="http://www.ens.fr/"><img class='logo' src={% static "ens.png"%} alt='logo_ens'/></a>
       <a href="http://www.phys.ens.fr/"><img class='logo' src={% static "phys.png"%} alt='logo_dpt_physique' /></a>
     </div>
     <div id='titre_div'>
@@ -39,11 +39,12 @@
     {% block nav %}
     <hr/>
     <ul id='nav_ul'>
-      <a href='https://poisson.ens.fr/index.php'><li>Accueil</li></a>
-      <a href='https://poisson.ens.fr/formation.php'><li>Formation</li></a>
-      <a href='https://poisson.ens.fr/candidater.php'><li>Candidater</li></a>
-      <a href='https://poisson.ens.fr/infos.php'><li>Informations</li></a>
-      <a href='https://poisson.ens.fr/collection.php'><li>Matériel</li></a>
+      <a href={% url "index" %}><li>Accueil</li></a>
+      <a href={% url "formation" %}><li>Formation</li></a>
+      <a href={% url "candidater" %}><li>Candidater</li></a>
+      <a href={% url "infos" %}><li>Informations</li></a>
+      <a href={% url "collection" %}><li>Matériel</li></a>
+      <a href='{% url "recherche_accueil" %}'><li>Ressources</li></a>
       <a href='https://poisson.ens.fr/Intranet/Wiki/index.php'><li>Wiki</li></a>
     </ul>
     {% endblock %}

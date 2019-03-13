@@ -1,0 +1,114 @@
+{% extends "squelette.html" %}
+{% block title %}Centre de Montrouge de préparation à l'agrégation{% endblock %}
+{% block content %}
+
+<section>
+<br>
+<h2 id='titre'>Bienvenue sur le site de la préparation à l'agrégation de Montrouge !</h2>
+
+<!--<div id="infos_div">
+  <p><strong class='infos'>Inscriptions au concours 2019</strong> Les inscriptions aux concours de l'agrégation seront ouvertes du 11 septembre au 11 octobre 2019. Rendez-vous <a href="http://www.devenirenseignant.gouv.fr/cid98448/calendrier-des-concours-de-recrutement-d-enseignants-du-second-degre-de-la-session-2016.html">sur cette page</a>.</p>
+</div>-->
+
+
+<!--<div id="infos_div">
+<p><strong class='infos'>Inscriptions 2018 :</strong> Les inscriptions au centre de préparation de Montrouge pour l'année 2018-2019 pour le concours classique et le concours docteurs sont ouvertes jusqu'au <strong class="dates">1er juin</strong> ! Rendez-vous sur <a href="http://agregation.phys.ens.fr/Inscription/inscription-bare.php">notre formulaire</a> pour candidater aux préparations des concours classique et docteurs.</p>
+<p><strong class='infos'>Inscriptions 2018 :</strong> Les inscriptions au centre de préparation de Montrouge pour l'année 2018-2019 sont fermées. Pour tout cas particulier, nous contacter par email.</p>
+
+<p>Pour que votre inscription soit prise en compte, assurez-vous d'avoir bien créé un compte via le formulaire ci-dessus pour enregistrer votre dossier.</p>
+<p><strong class='infos'>Important :</strong> N'oubliez pas de vous inscrire au concours de l'agrégation (voie standard ou voie docteurs), entre le <strong>12 septembre 2017</strong> à 12h et le <strong>12 octobre 2017</strong> à 17h. On conseille fortement aux étudiants possédant un doctorat de s'inscrire aux deux voies, quitte à retarder le choix du concours qu'ils souhaitent passer.</p>
+</div>-->
+
+<p>Le centre de préparation à l'agrégation de Montrouge est une formation commune entre Sorbonne Université, l'université Paris-Sud, et l'ENS Ulm. Une vingtaine d'étudiants sont préparés chaque année à l'agrégation de physique-chimie, option physique. Toute la formation se déroule sur le site de Montrouge  (ENS, Agrégation de Physique, 1 rue Maurice Arnoux 92120 Montrouge).</p>
+
+<p>Pour toutes vos questions sur l'agrégation, consultez les <a href={% url "infos" %}>FAQ</a>. Pour plus de détails sur les spécificités de la préparation de Montrouge, consultez la page liée à la <a href={% url "formation" %}>formation</a>. Les résultats des années précédentes sont ci-dessous.</p>
+ 
+ 
+<h1>Pourquoi passer l'agrégation ?</h1>
+
+<p>L'agrégation est un concours de recrutement de l'Éducation Nationale, qui permet d'entrer dans le corps d'État des agrégés. À partir de ce concours, plusieurs débouchés sont possibles:</p>
+
+<ul>
+  <li>professeur(e) en lycée ou collège ;</li>
+  <li>professeur(e) en CPGE ;</li>
+  <li>PRAG en universités ou IUT ;</li>
+  <li>postes temporaires d'AGPR dans les ENS.</li>
+</ul>
+
+<h4>Niveau de l'agrégation</h4>
+Les agrégés ayant vocation à enseigner jusqu'à un niveau L2/L3, les candidats au concours doivent montrer qu'ils maîtrisent les notions de physique dispensées à un niveau de Master 1, et les notions de chimie au programme des classes préparatoire PC/PC*.
+
+
+<h1 id='resultats_h1'>Résultats du centre</h1>
+<p>Le centre de Montrouge a un <strong>excellent taux de succès au concours</strong>. Voici les statistiques de ces dernières années :</p>
+<br>
+
+<h2>Agrégation externe</h2>
+
+<table id='resultats'>
+
+  <tr>
+    <td><strong>2018</strong></td>
+    <td class='postes'> (72 postes)</td>
+    <td class='histo'><span class='histo_gauche' id='histo_g_2018'>9/12 admis</span><span class='histo_droite' id='histo_d_2018'><strong>75%</strong></span></td>
+    <td class='rangs'>Rangs : <strong>2</strong>, <strong>3</strong>, <strong>6</strong>, 15, 21, 26, 38, 49, 54</td>
+  </tr>  
+  
+  <tr>
+    <td><strong>2017</strong></td>
+    <td class='postes'> (87 postes)</td>
+    <td class='histo'><span class='histo_gauche' id='histo_g_2017'>15/16 admis</span><span class='histo_droite' id='histo_d_2017'><strong>94%</strong></span></td>
+    <td class='rangs'>Rangs : <strong>7</strong>, <strong>9</strong>, 13, 16, 20, 25, 26, 27, 49, 64, 66, 71, 72, 78, 82</td>
+  </tr>
+  
+  <tr>
+    <td><strong>2016</strong></td>
+    <td class='postes'> (92 postes)</td>
+    <td class='histo'><span class='histo_gauche' id='histo_g_2016'>20/23 admis</span><span class='histo_droite' id='histo_d_2016'><strong>87%</strong></span></td>
+    <td class='rangs'>Rangs : <strong>1</strong>, <strong>3</strong>, <strong>4</strong>, 12, 15, 23, 30, 34, 35, 36, 40, 41, 42, 54, 57, 62, 65, 67, 72, 78</td>
+  </tr>
+  
+  <tr>
+    <td><strong>2015</strong></td>
+    <td class='postes'> (89 postes)</td>
+    <td class='histo'><span class='histo_gauche' id='histo_g_2015'>15/24 admis</span><span class='histo_droite' id='histo_d_2015'><strong>63%</strong></span></td>
+    <td class='rangs'>Rangs : <strong>1</strong>, <strong>5</strong>, 17, 20, 28, 30, 36, 37, 43, 45, 49, 51, 58, 78, 86</td>
+  </tr>
+
+  <tr>
+    <td><strong>2014</strong></td>
+    <td class='postes'> (75 postes)</td>
+    <td class='histo'><span class='histo_gauche' id='histo_g_2014'>9/18 admis</span><span class='histo_droite' id='histo_d_2014'><strong>50%</strong></span></td>
+    <td class='rangs'>Rangs : <strong>1</strong>, <strong>2</strong>, 18, 22, 24, 38, 54, 65, 66</td>
+  </tr>
+  
+  <tr>
+    <td><strong>2013</strong></td>
+    <td class='postes'> (75 postes)</td>
+    <td class='histo'><span class='histo_gauche' id='histo_g_2013'>20/25 admis</span><span class='histo_droite' id='histo_d_2013'><strong>80%</strong></span></td>
+    <td class='rangs'>Rangs : <strong>1</strong>, <strong>2</strong>, <strong>5</strong>, <strong>7</strong>, 11, 14, 16, 18, 26, 27, 30, 32, 42, 43, 48, 49, 50, 52, 54, 61</td>
+  </tr>
+</table>  
+
+
+<h2>Agrégation externe spéciale</h2>
+
+<table id='resultats_voie_specifique'>
+  <tr>
+    <td><strong>2018</strong></td>
+    <td class='postes'> (12 postes)</td>
+    <td class='histo'><span class='histo_gauche' id='histo_g_2018_spe'>1/4 admis</span><span class='histo_droite' id='histo_d_2018_spe'><strong>25%</strong></span></td>
+    <td class='rangs'>Rang : 11</td>
+  </tr>
+  
+  <tr>
+    <td><strong>2017</strong></td>
+    <td class='postes'> (09 postes)</td>
+    <td class='histo'><span class='histo_gauche' id='histo_g_2017_spe'>3/3 admis</span><span class='histo_droite' id='histo_d_2017_spe'><strong>100%</strong></span></td>
+    <td class='rangs'>Rangs : <strong>1</strong>, <strong>2</strong>, <strong>3</strong></td>
+  </tr>
+</table>
+
+</section>
+
+{% endblock %}

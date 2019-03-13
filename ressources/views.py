@@ -1,12 +1,12 @@
-from django.shortcuts import render,redirect, get_object_or_404
-from django.http import HttpResponse, Http404
+from django.shortcuts import render#,redirect, get_object_or_404
+#from django.http import HttpResponse, Http404
 
-from .models import Ressource, RessourceLien, RessourceScript, RessourceImage, RessourceFichier, Discipline,Oral
+from .models import Ressource, RessourceLien, RessourceScript, RessourceImage, RessourceFichier, Oral
 # Create your views here.
 
 from .forms import RessourceForm, RessourceParOralForm
 
-def accueil(request):
+def recherche_accueil(request):
     form = RessourceForm(None)
     form2 = RessourceParOralForm(None)
     
@@ -95,3 +95,4 @@ def recherche_tous(request):
 
     # Quoiqu'il arrive, on affiche la page du formulaire.
     return render(request, 'ressources/recherche.html', locals())
+

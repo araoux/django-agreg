@@ -1,0 +1,47 @@
+{% extends "squelette.html" %}
+{% block title %}Collection de matériel{% endblock %}
+{% block content %}
+
+<section>
+
+<h1>Recherche d'un instrument</h1>
+<article>
+<p>Rechercher un appareil dans la collection de Montrouge en remplissant au moins un des champs ci-dessous.</p>
+
+<form action={% url "collection" %} method="post">
+    {% csrf_token %}
+    <h3 style="display:inline">Rechercher : </h3>
+    {{ form.as_table }}
+    <input style="display:inline" type="submit" value="Rechercher" />
+</form>
+
+<!--
+  <form method="post" action="">
+    {% csrf_token %}
+    <input type="hidden" name="action" value="recherche" />
+    
+    <span class='form_span'><label for="nom">Instrument &mdash;</label> <input type="text" name="nom" id="nom" size="15" maxlength="25" placeholder="Générateur"/></span>
+    <span class='form_span'><label for="ENSP">Numéro ENSP &mdash;</label> <input type="text" name="ENSP" id="ENSP" size="10" maxlength="5" placeholder="3004"/></span>
+    <span class='form_span'><label for="notice">Notice &mdash;</label> <input type="text" name="notice" id="notice" size="10" maxlength="4" placeholder="29"/></span>
+
+    <span class='form_span'><input type="submit" class="submit" value="Rechercher" class="search" name="submit" style="text-align:right"/></span>
+
+  </form>
+  -->
+</article>
+{{form.is_valid}}
+{{show_results}}
+
+{% if show_results %}
+    
+    <hr>
+    <h1>Résultats</h1>
+    
+{% endif %}
+
+
+
+
+</section>
+
+{% endblock %}

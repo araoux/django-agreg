@@ -19,10 +19,7 @@ class RessourceForm(forms.ModelForm):
         self.fields['discipline'].required = True
         self.fields['categorie'].required = True
         self.fields['sous_cat'].required = False
-        #self.fields['oral'].required = False
-        #self.fields['mots_cles'].required = False
-
-
+ 
 class RessourceParOralForm(forms.ModelForm):
     
     class Meta:

@@ -66,9 +66,9 @@ nav
 #nav_ul li 
 {
   display:inline-block;
-  width:16%;
+  width:13%;
   border: solid black 0px;
-  padding:20px 0px 20px  0px;
+  padding:15px 0px 15px  0px;
   text-align:center;
   margin:0px;
 }

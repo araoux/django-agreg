@@ -19,6 +19,8 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
+from pages_generales import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ressources/', include('ressources.urls')),
@@ -26,3 +28,12 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += [
+    path("candidater", views.candidater, name="candidater"),
+    path("formation", views.formation, name="formation"),
+    path("index", views.index, name="index"),
+    path("infos", views.infos, name="infos"),
+    path("", views.index),
+    path("collection", views.collection, name="collection"),
+    ]
