@@ -2,8 +2,6 @@
 {% block title %}Candidater{% endblock %}
 {% block content %}
 
-<section>
-
 <h1>Les épreuves du concours</h1>
 <article>
 
@@ -22,14 +20,12 @@
 <li><strong>Problème de physique</strong> (6h)</li>
 </ul>
 
-
 <h3>Épreuves d'admission</h3>
 <ul>
 <li><strong>Leçon de physique</strong> (4h de préparation, 40min de présentation, 40min de questions)</li>
 <li><strong>Leçon de chimie</strong> (4h de préparation, 40min de présentation, 40min de questions)</li>
 <li><strong>Montage de physique</strong> (4h de préparation, 30min de présentation, 40min de questions)</li>
 </ul>
-
 
 
 <h2>L'agrégation externe spéciale de physique</h2>
@@ -85,61 +81,4 @@ Une seule épreuve d'admissibilité : un écrit de 6h associant physique et chim
 <p>La chimie constitue la mineure de l'agrégation de physique, mais elle n'est en aucun cas sous-estimée au centre de Montrouge. Toutes les notions de classes préparatoires au programme du concours sont revues en cours/TDs, avec des DMs hebdomadaires permettant d'assimiler au mieux les notions, nouvelles ou non pour les étudiants. Ces cours/TDs sont donnés par les enseignants de l'agrégation de chimie, un étage au-dessus de l'étage physicien.</p>
 
 </article>
-
-<!--
-<h1>Annales de l'agrégation de physique &mdash; voie spéciale docteurs</h1>
-<article class='center' id="epreuves_article_spe">
-
-<table id='table_epreuves_spe'>
-<tr><th>Année</th><th>Partie dominante physique</th><th>Partie dominante chimie</th></tr>
-<?php 
-
-// $annee = 2017;
-// 
-// while ($annee> 2016)
-// {
-//   echo "<tr><th>".$annee."</th>";
-//   echo "<td>";
-//   if (file_exists($dossier_epreuves.'spe_phys_'.$annee.".pdf")) {echo "<a href='".$dossier_epreuves."spe_phys_".$annee.".pdf'>".$epreuves_spe_phys[$annee]."</a>";}
-//   elseif (isset($epreuves_spe_phys[$annee])) {echo $epreuves_spe_phys[$annee];}
-//   echo "</td><td>";
-//   if (file_exists($dossier_epreuves.'spe_chim_'.$annee.".pdf")) {echo "<a href='".$dossier_epreuves."spe_chim_".$annee.".pdf'>".$epreuves_spe_chim[$annee]."</a>";}
-//   echo "</td>";  
-//   $annee=$annee-1;
-// }
-
-?>
-</table>
-</article>-->
-
-<!--<h1>Annales de l'agrégation de physique &mdash; voie classique</h1>
-<article class='center' id="epreuves_article">
-
-<table id='table_epreuves'>
-<tr><th>Année</th><th>Épreuve A: composition de physique</th><th>Épreuve B : composition de chimie</th><th>Épreuve C : problème de physique</th></tr>
-
-<?php 
-// $annee = 2017;
-// 
-// while ($annee> 1975)
-// {
-//   echo "<tr><th>".$annee."</th>";
-//   echo "<td>";
-//   if (file_exists($dossier_epreuves.'A_'.$annee.".pdf")) {echo "<a href='".$dossier_epreuves."A_".$annee.".pdf'>".$epreuves_A[$annee]."</a>";}
-//   elseif (isset($epreuves_A[$annee])) {echo $epreuves_A[$annee];}
-//   echo "</td><td>";
-//   if (file_exists($dossier_epreuves.'B_'.$annee.".pdf")) {echo "<a href='".$dossier_epreuves."B_".$annee.".pdf'>Sujet</a>";}
-//   echo "</td><td>";
-//   if (file_exists($dossier_epreuves.'C_'.$annee.".pdf")) {echo "<a href='".$dossier_epreuves."C_".$annee.".pdf'>".$epreuves_C[$annee]."</a>";}
-//   elseif (isset($epreuves_C[$annee])) {echo $epreuves_C[$annee];}
-//   echo "</td>";  
-//   $annee=$annee-1;
-// }
-
-?>
-</table>
-</article>-->
-
-</section>
-
 {% endblock %}

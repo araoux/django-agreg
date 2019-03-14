@@ -1,0 +1,220 @@
+{% extends "squelette.html" %}
+{% load static %}
+
+{% block title %}Informations centre de Montrouge{% endblock %}
+
+{% block content %}
+<h1>Contacts</h1>
+
+<article id='organigramme_article'>
+<table id='table_organigramme'>
+  <tr>
+    <th></th>
+    <th colspan='3'>Physique</th>
+    <th colspan='3'>Chimie</th>
+  </tr>
+  <tr>
+    <th rowspan='2'>Direction</th>
+    <td>Agnès Maître</td>
+    <td rowspan='3'>agregationATphys.ens.fr</td>
+    <td>01 44 27 42 17</td>
+    <td>Nicolas Lévy</td>
+    <td>nicolas.levy AT ens.fr</td>
+    <td rowspan='2'>01 58 07 66 11</td>
+  </tr>
+  <tr>
+    <td>Arnaud Raoux</td>
+    <td>01 58 07 66 30</td>
+    <td>Anne-Sophie Bernard</td>
+    <td>anne-sophie.bernard AT ens.fr</td>
+  </tr>
+
+  <tr>
+    <th>Secrétariat</th>
+    <td>André Salou</td>
+    <td>01 58 07 66 15</td>
+    <td>Marlène Dumeur</td>
+    <td>marlene.dumeur AT ens.fr</td>
+    <td>01 58 07 66 00</td>
+  </tr>
+  <tr>
+    <th rowspan='3'>Correspondants</th>
+    <td>François Levrier (ENS)</td>
+    <td>francois.levrier AT ens.fr</td>
+    <td>01 44 32 39 93</td>
+    <td rowspan='3' colspan='3'></td>
+  </tr>
+  <tr>  
+    <td>Jean-Noël Aqua (SU)</td>
+    <td>jean-noel.aqua AT insp.upmc.fr</td>
+    <td>01 44 27 61 20</td>
+  </tr>
+  <tr>
+    <td>Robin Zegers (Paris-Sud)</td>
+    <td>robin.zegers AT u-psud.fr</td>
+    <td>01 69 15 82 09</td>
+  </tr>
+  <tr>
+    <th rowspan='2'>Pôle technique</th>
+    <td>Éric Guineveu</td>
+    <td>eric.guineveu AT ens.fr</td>
+    <td>01 58 07 66 35</td>
+    <td rowspan='2'>Amélie Ravinet</td>
+    <td rowspan='2'>amelie.ravinet AT ens.fr</td>
+    <td rowspan='2'>01 58 07 66 12</td>
+  </tr>
+  <tr>
+    <td>Nasser Hamadi</td>
+    <td>nasser.hamadi AT ens.fr</td>
+    <td>01 58 07 66 32</td>
+  </tr>
+  <tr>
+    <th>Bibliothèque</th>
+    <td colspan='2'>Yvon Poncel</td>
+    <td colspan='2'>yvon.poncel AT ens.fr</td>
+    <td colspan='2'>01 58 07 66 37</td></tr>
+  
+</table>
+</article>
+
+<h1>Accès au centre</h1>
+
+
+<article style='vertical-align:center;'>
+
+<div id='acces_liste_div'>
+<h2 style='text-align:center;'>Accès en transports</h2>
+<p><strong>Métro</strong> : ligne 4, arrêt Mairie de Montrouge</p>
+<p><strong>Tram</strong> : ligne T3, arrêt Jean Moulin</p>
+<p><strong>Bus</strong> : ligne 194, arrêt Depinoy ou ligne 38 arrêt Porte d'Orléans</p>
+<p><strong>RER</strong> : ligne B, arrêt Cité universitaire. Prendre le tram pour deux stations.</p>
+</div>
+<div id='acces_div'> {% load static %}
+<img src={% static "plan.png" %} alt='plan_accès' style="border:solid 1px black; width:80%; text-align:center;">
+</div>
+
+</article>
+
+<h1 id='FAQ'>FAQ: questions diverses</h1>
+<div class='center'>
+<article style="display:inline-block; width:60%; text-align:justify;">
+<h3>Combien de candidats acceptez-vous au sein de la préparation ?</h3>
+
+<p>Nous privilégions les petits groupes afin d'optimiser l'encadrement et de permettre une cohésion de classe qui aide à surmonter le stress du concours. Nous proposons, en général, 18 à 24 places. Une petite promo assure également un grand nombre de passage en leçons et montages, et donc une très bonne préparation aux épreuves orales.</p>
+
+
+<h3>Quelle formation faire pour anticiper une année de préparation à l'agrégation ?</h3>
+
+<p> La formation des ENS est particulièrement adaptée pour aborder sereinement l'année de préparation à l'agrégation. Il existe de plus des cursus adaptés dans les deux universités partenaires qui permettent d'aborder cette année en douceur : à Sorbonne Université, il est possible de suivre un <a href={{lien_SU_master}}>M1 dédié</a>, et à l'université Paris-Sud le <a href={{lien_P11_magistere}}>magistère d'Orsay</a> (L3-M1) offre un excellent tremplin.</p>
+ 
+<h3>Je viens de réussir le CAPES. Puis-je préparer l'agrégation au sein du centre de Montrouge dans la foulée ?</h3>
+<p>Oui, nous recrutons régulièrement ce type de profil. Il est possible d'obtenir un report de stage à l'issue du CAPES pour formation.
+
+<h3>Je suis enseignant depuis quelques années, et j'aimerais préparer l'agrégation. Puis-je candidater au centre de Montrouge ?</h3>
+<p>Tout à fait, nous recrutons chaque année des enseignants confirmés. Cependant, notre nombre de places est limité, nous privilégions les candidats qui ont déjà été admissibles à l'agrégation par le passé.</p>
+ 
+<h3>Puis-je préparer l'agrégation à Montrouge à l'issue d'un doctorat, post-doctorat, école d'ingénieur ?</h3>
+<p>Oui ! La particularité de notre centre est d'examiner tout type de profil. Plusieurs docteurs, post-doctorants, ingénieurs, ou capétiens viennent compléter la promotion chaque année, et avec un excellent taux de réussite. Aussi, ne vous censurez pas dans l'envoi des dossiers. Il faut évidemment présenter un dossier avec une solide formation en physique générale.</p>
+
+<p>De plus, notre centre est officiellement reconnu par l'ANPE comme centre de formation continue. Pendant cette année, vous pourrez recevoir des allocations chômage à ce titre. (attention, cocher la case "en formation continue" et non "étudiant" dans votre dossier)</p>
+
+<h3>Combien coûte l'année de préparation à l'agrégation ?</h3>
+<p>Tous nos étudiants doivent être inscrits à l'université, il faut donc s'acquitter des droits habituels d'inscription. Les personnes en reconversion d'études ou sortant d'un doctorat devront s'acquitter des droits de formation continue de nos universités partenaires, prix fixe quelque soit le curriculum de l'étudiant défiant toute concurrence (~200€) ! </p>
+
+<h3>Peut-on préparer le CAPES en même temps que l'agrégation ?</h3>
+<p>Oui c'est possible puisque les dates des concours ne sont pas simultanées et l'emploi du temps de notre centre est adapté en ce sens. Néanmoins, nous ne préparons pas spécifiquement aux épreuves du CAPES qui sont de nature assez différentes de celles de l'agrégation.</p>
+
+
+<h3>Puis-je redoubler la préparation à Montrouge si je n'ai pas obtenu le concours ?</h3>
+<p>Oui. Si l'investissement au cours de l'année est celui attendu et que malheureusement, le succès n'est pas au rendez-vous, nous gardons nos agrégatifs une année supplémentaire avec un programme adapté selon le redoublement.</p>
+ 
+
+<h3>Quelle est la quantité de travail à fournir durant la préparation ? Par rapport à une CPGE ?</h3>
+<p>La formation est intense, notamment avant les écrits (cours, TDs, DS, TPs, préparation aux oraux, etc.). À partir d'avril, l'emploi du temps est volontairement allégé afin de vous laisser plus de temps pour le travail personnel.</p>
+<p>Comparativement à la CPGE, la formation s'appuie davantage sur un travail de groupe dans un contexte professionnalisant donc plus mature. Le travail se concentre uniquement sur vos deux matières de prédilection : physique (majeure) et chimie (mineure).</p>
+
+ 
+<h3>Que dois-je réviser/travailler en amont de l'année de préparation ?</h3>
+<p>Notre expérience indique que les bases (physique : CPGE-début L3 ; chimie : 1ère année CPGE) doivent être maîtrisées pour être efficace dès le mois de septembre. Les points essentiels de L3-M1 en physique et PCSI/PC* en chimie seront revus au cours de l'année. Pour plus de détails, consultez le <a href="documents/GuideAgregatif.pdf">guide de l'agrégatif</a>.</p>
+<p>Nous vous encourageons à assister aux oraux publics du concours qui ont lieu fin juin / début juillet (renseignements sur le <a href="http://agregation-physique.org/">site du concours</a></p>
+
+ 
+<h3>À quel poste puis-je prétendre avec une agrégation de physique ?</h3>
+<p>Les agrégés de physique sont susceptibles d'enseigner en Lycée, en CPGE, en BTS, en IUT, en Écoles d'Ingénieur et en Université (PRAG).</p>
+
+<h3>J'ai réussi le concours de l'agrégation. Que se passe-t-il ensuite ?</h3>
+<p>Lors de la réussite du concours, vous obtenez le statut de fonctionnaire stagiaire. L'année suivante, il convient de valider votre agrégation par une année de stage (au sein d'une ESPE) afin d'être titularisé(e) : vous serez affecté dans un établissement selon vos vœux. Sous la supervision d'un tuteur (enseignant confirmé), vous aurez la moitié d'un service devant élève, 'autre moitié étant dédiée à votre formation au sein d'une ESPE. L'année d'après, vous devrez participer au mouvement général, pour une nouvelle affectation à temps plein.</p>
+
+<h3>Une fois l'agrégation obtenue, suis-je obligé de prendre tout de suite mon poste ?</h3>
+<p>Non pas forcément. Plusieurs cadres de report de stage existent selon le projet envisagé et sous réserve d'acceptation du ministère :
+<ul>
+<li>report pour études (1 année, renouvelable) ;</li>
+<li>report pour projet doctoral (3 années) ;</li>
+<li>demande de mise en disponibilité.</li>
+</ul>
+</p>
+
+<p>Remarque : un monitorat durant ses études doctorales permettent de valider son stage en deux ans.</p>
+
+</article>
+</div>
+
+<h1>Quelques liens</h1>
+<article id="liens_article">
+
+<h3>Sites des agrégations de physique</h3>
+<a href="http://www.agregation-physique.org"> Agrégation de physique standard</a><br>
+<a href="http://site2.agregation-physique.org/"> Agrégation de physique spéciale docteurs</a><br>
+
+
+<h3>Établissements contractants</h3>
+
+<a href="http://www.ens.fr">École Normale Supérieure</a><br>
+<a href="https://www.sorbonne-universite.fr/">Sorbonne Université</a><br>
+<a href="http://www.u-psud.fr/">Université Paris-Sud</a>
+
+
+<h3>Informations officielles générales</h3>
+
+<a href="http://www.education.gouv.fr/">Ministère de l'Éducation Nationale</a><br>
+<a href="http://www.education.gouv.fr/bo/default.htm">Bulletin Officiel de l'Éducation Nationale</a><br>
+<a href="http://www.legifrance.gouv.fr/">Légifrance</a><br>
+<a href="http://www.education.gouv.fr/pid25058/le-calendrier-scolaire.html">Calendrier scolaire</a><br>
+<a href="http://www.education.gouv.fr/personnel/metiers/professeur_agrege.htm">Statuts des agrégés</a>
+
+
+<h3>Informations officielles spécifiques aux concours</h3>
+
+<a href="http://www.education.gouv.fr/siac/siac2/default.htm">Système d'information et d'aide aux concours (SIAC)</a><br>
+<a href="http://www.education.gouv.fr/pid63/siac2.html">Guide de l'inscription aux concours</a><br>
+<a href="http://cache.media.education.gouv.fr/file/agregation_externe/55/4/p2017_agreg_ext_physchim_physique_556554.pdf">Programme du concours de l'agrégation</a><br>
+
+
+<h3>Association</h3>
+
+<a href="http://www.cndp.fr/">Centre National de Documentation Pédagogique</a><br>
+<a href="http://www.sfpnet.fr/">Société Française de Physique</a><br>
+<a href="http://www.udppc.asso.fr/">Union des Physiciens</a><br>
+<a href="http://prepas.org/">Association des Professeurs des Classes Préparatoires aux Grandes Écoles</a>
+
+
+<h3>Ressources pédagogiques</h3>
+
+<a href="http://ccsd.cnrs.fr/PhysNet/">PhysNet : The Physics Departments and Documents Network</a><br>
+<a href="http://physicsworld.com/">PhysicsWorld</a><br>
+<a href="http://www.inrp.fr/lamap/">La main à la pâte</a>
+
+<h3>Autres Centres de préparation à l'agrégation</h3>
+
+<a href="http://www.physique.ens-cachan.fr/pagregp">ENS Paris-Saclay</a><br>
+<a href="http://physique.ens-lyon.fr/agregation-224709.kjsp?RH=DPTPHY&RF=DPT-PHY-agreg">ENS de Lyon</a><br>
+<a href="http://www.agregationphysique.fr/">Bordeaux</a><br>
+<a href="https://etudes.univ-rennes1.fr/agreg-physique">Rennes</a><br>
+<a href="http://physique-sciences.univ-amu.fr/departement/prepa-agreg-physique-chimie">Marseille</a><br>
+<a href="http://www.physique-ingenierie.unistra.fr/spip.php?rubrique104">Strasbourg</a><br>
+<a href="http://sciences-techniques.univ-rouen.fr/preparation-a-l-agregation-de-sciences-physiques-375096.kjsp">Rouen</a><br>
+<a href="http://agreg.physchim.tlse.free.fr/">Toulouse</a><br>
+
+</article>
+
+{% endblock %}
