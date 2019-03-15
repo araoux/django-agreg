@@ -28,12 +28,13 @@ class OralAdmin(admin.ModelAdmin):
    # Modification de la page d'édition
    fields = ('agreg','type_oral','numero','nom', 'ext','spe')
 
+#admin.site.register(Discipline)
 admin.site.register(Categorie)
 admin.site.register(SousCategorie, SousCategorieAdmin)
 admin.site.register(Oral,OralAdmin)
+admin.site.register(MotCle)
+
 admin.site.register(RessourceImage,RessourceAdmin)
-#admin.site.register(Discipline)
 admin.site.register(RessourceFichier,RessourceAdmin)
 admin.site.register(RessourceScript,RessourceAdmin)
 admin.site.register(RessourceLien,RessourceAdmin)
-admin.site.register(MotCle)
