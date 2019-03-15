@@ -1,7 +1,4 @@
 site_ressources/settings.py
-db.sqlite3
 ressources/__pycache__/
-venv/
 __pycache__
 site_ressources/__pycache__/
-exclude-list.txt
