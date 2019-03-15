@@ -9,7 +9,7 @@ class Notice(models.Model):
     fichier = models.FileField(null=True)
 
     class Meta:
-        verbose_name = "Statut"
+        verbose_name = "Notice"
     def __str__(self):
         afficher = str(self.nom)
         return afficher
@@ -78,7 +78,7 @@ class Instrument(models.Model):
     image = models.ImageField(blank=True,null=True)
     statut = models.ForeignKey(Statut, on_delete='SET_NULL', null=True)
     categorie = models.ForeignKey(Categorie, on_delete='SET_NULL', null=True)
-    theme = models.ForeignKey(Theme, on_delete='SET_NULL', null=True)
+    theme = models.ForeignKey(Theme, on_delete='SET_NULL', null=True, blank=True)
     rangee = models.ForeignKey(Rangee, on_delete='SET_NULL', null=True)
     colonne = models.ForeignKey(Colonne, on_delete='SET_NULL', null=True)
     etagere = models.ForeignKey(Etagere, on_delete='SET_NULL', null=True)
