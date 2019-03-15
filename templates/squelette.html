@@ -44,8 +44,8 @@
       <a href={% url "candidater" %}><li>Candidater</li></a>
       <a href={% url "infos" %}><li>Informations</li></a>
       <a href='https://agreg.phys.ens.fr/collection.php'><li>Matériel</li></a>
-      <a href='{% url "recherche_accueil" %}'><li>Ressources</li></a>
-      <a href='https://poisson.ens.fr/Intranet/Wiki/index.php'><li>Wiki</li></a>
+      <a href={% url "recherche_accueil" %}><li>Ressources</li></a>
+      <a href='https://agreg.phys.ens.fr/Intranet/Wiki/index.php'><li>Wiki</li></a>
     </ul>
     {% endblock %}
   </nav>
