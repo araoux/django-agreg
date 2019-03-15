@@ -15,13 +15,16 @@ class Discipline(models.Model):
 
 class Categorie(models.Model):
     nom = models.CharField(max_length=30)
+    discipline = models.ForeignKey(Discipline,on_delete=models.SET_NULL,verbose_name="discipline", null = True)
 
+    class Meta:
+        verbose_name = "Catégorie"
     def __str__(self):
         return self.nom
 
 class SousCategorie(models.Model):
     nom = models.CharField(max_length=30)
-    cat_parent = models.ForeignKey(Categorie,on_delete=models.CASCADE,verbose_name="catégorie")
+    cat_parent = models.ForeignKey(Categorie,on_delete=models.SET_NULL,verbose_name="catégorie", null = True)
 
     class Meta:
         verbose_name = "Sous-catégorie"
@@ -30,6 +33,7 @@ class SousCategorie(models.Model):
 
 class MotCle(models.Model):
     nom = models.CharField(max_length=20)
+    discipline = models.ForeignKey(Discipline,on_delete=models.SET_NULL,verbose_name="discipline", null = True, blank = True)
 
     class Meta:
         verbose_name = "Mot-clé"
@@ -38,7 +42,7 @@ class MotCle(models.Model):
 
 class Oral(models.Model):
     nom = models.CharField(max_length=100)
-    numero = models.PositiveSmallIntegerField(verbose_name='n°')
+    numero = models.PositiveSmallIntegerField(verbose_name='n° (ext)')
     agreg = models.ForeignKey(Discipline, null=True, on_delete=models.SET_NULL)
     spe = models.BooleanField()
     ext = models.BooleanField(default=True)
@@ -47,7 +51,8 @@ class Oral(models.Model):
     type_oral = models.CharField(max_length=2,choices=liste_oraux)
 
     class Meta:
-        verbose_name = "Oraux"
+        verbose_name = "Oral"
+        verbose_name_plural = "Oraux"
     def __str__(self):
         afficher = str(self.agreg) + " " + self.type_oral + " " +  str(self.numero) + ". " + self.nom
         return afficher
@@ -69,13 +74,24 @@ class Ressource(models.Model):
 
 class RessourceImage(Ressource):
     contenu = models.ImageField()
+    class Meta:
+        verbose_name = "Ressource - Image"
+        verbose_name_plural = "Ressources - Images"
 
 class RessourceFichier(Ressource):
     contenu = models.FileField()
+    class Meta:
+        verbose_name = "Ressource - pdf"
+        verbose_name_plural = "Ressources - pdf"
 
 class RessourceScript(Ressource):
     contenu = models.FileField()
+    class Meta:
+        verbose_name = "Ressource - Script Python"
+        verbose_name_plural = "Ressources - Scripts Python"
 
 class RessourceLien(Ressource):
-    contenu = models.URLField()
-
+    contenu = models.URLField(verbose_name="URL")
+    class Meta:
+        verbose_name = "Ressource - Lien"
+        verbose_name_plural = "Ressources - Liens"

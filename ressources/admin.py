@@ -13,7 +13,6 @@ class RessourceAdmin(admin.ModelAdmin):
    # Modification de la page d'édition
    fields = ('contenu','description', 'discipline','categorie','sous_cat','oral','mots_cles')
 
-
 class SousCategorieAdmin(admin.ModelAdmin):
    list_display   = ('nom', 'cat_parent')
    list_filter    = ('cat_parent',)
