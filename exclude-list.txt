@@ -2,3 +2,4 @@
 /home/raoux/projects/django-agreg/static/
 /home/raoux/projects/django-agreg/venv
 /home/raoux/projects/django-agreg/.git
+/home/raoux/projects/django-agreg/site_ressources/settings.py
