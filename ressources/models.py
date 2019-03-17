@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 from django.utils import timezone
-
+from .config import renommage
 
 class Discipline(models.Model):
     nom = models.CharField(max_length=16)
@@ -73,19 +73,19 @@ class Ressource(models.Model):
         ordering = ['date']
 
 class RessourceImage(Ressource):
-    contenu = models.ImageField()
+    contenu = models.ImageField(upload_to=renommage)
     class Meta:
         verbose_name = "Ressource - Image"
         verbose_name_plural = "Ressources - Images"
 
 class RessourceFichier(Ressource):
-    contenu = models.FileField()
+    contenu = models.FileField(upload_to="ressources_documents/")
     class Meta:
         verbose_name = "Ressource - pdf"
         verbose_name_plural = "Ressources - pdf"
 
 class RessourceScript(Ressource):
-    contenu = models.FileField()
+    contenu = models.FileField(upload_to="ressources_scripts/")
     class Meta:
         verbose_name = "Ressource - Script Python"
         verbose_name_plural = "Ressources - Scripts Python"

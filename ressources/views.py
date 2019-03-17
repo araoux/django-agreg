@@ -6,6 +6,7 @@ from .models import Ressource, RessourceLien, RessourceScript, RessourceImage, R
 
 from .forms import RessourceForm, RessourceParOralForm
 
+
 def recherche_accueil(request):
     form = RessourceForm(None)
     form2 = RessourceParOralForm(None)
