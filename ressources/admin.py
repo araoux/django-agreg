@@ -28,7 +28,7 @@ class OralAdmin(admin.ModelAdmin):
    # Modification de la page d'édition
    fields = ('agreg','type_oral','numero','nom', 'ext','spe')
 
-class CategorielAdmin(admin.ModelAdmin):
+class CategorieAdmin(admin.ModelAdmin):
    list_display   = ('nom', 'discipline')
    list_filter    = ( 'discipline',)
    ordering       = ( 'discipline', 'nom')
@@ -39,7 +39,7 @@ class CategorielAdmin(admin.ModelAdmin):
 
 
 #admin.site.register(Discipline)
-admin.site.register(Categorie)
+admin.site.register(Categorie, CategorieAdmin)
 admin.site.register(SousCategorie, SousCategorieAdmin)
 admin.site.register(Oral,OralAdmin)
 admin.site.register(MotCle)
