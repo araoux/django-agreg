@@ -27,14 +27,42 @@
   </form>
   -->
 </article>
-{{form.is_valid}}
-{{show_results}}
+{{form.is_valid}}<br />
+{{show_results}}<br />
 
 {% if show_results %}
-    
+
+{% if not aumoinsunresultat %}
+<h4>Aucun résultat !</h4>
+{% else %}
+
+    form.cleaned_data={{form.cleaned_data}}<br />
+    ENSP={{ENSP}}
+    lisinstruments={{liste_instruments}}<br />
     <hr>
     <h1>Résultats</h1>
     
+    
+    <table id='table_resultats_recherche'>
+    <tr><th>Instrument</th><th>Référence</th><th>ENSP</th><th>Notice</th><th>Rangement</th><th>Statut</th></tr>
+    
+    {% for instr in liste_instruments %}
+      <tr>
+          <td><a href={% url } target='_blank'>{{instr.nom}}</a></td>
+          <td>{{instr.ref}}</td>
+          <td class='center'>{{instr.ENSP}}</td>
+          <td class='center'><a href={% url } target='_blank'>{{instr.notice.numero}}</a></td>
+          <td class='center'>{{instr.rangee}} &middot; {{instr.colonne}} &middot; {{instr.etagere}}</td>
+          <td>{{instr.statut}}</td>
+      </tr>
+    {% endfor %}
+    </table>
+
+
+    
+    
+    
+{% endif %}
 {% endif %}
 
 {% endblock %}

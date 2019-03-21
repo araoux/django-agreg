@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class Notice(models.Model):
     numero = models.SmallIntegerField()
-    commentaire = models.CharField(max_length=64, blank=True,null=True)
+    nom = models.CharField(max_length=64, blank=True,null=True)
     fichier = models.FileField(null=True)
 
     class Meta:
