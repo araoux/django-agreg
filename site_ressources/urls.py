@@ -25,15 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('ressources/', include('ressources.urls')),
     path('inscriptions/', include('inscriptions_agreg.urls')),
+    path('', include('pages_generales.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-urlpatterns += [
-    path("candidater", views.candidater, name="candidater"),
-    path("formation", views.formation, name="formation"),
-    path("index", views.index, name="index"),
-    path("infos", views.infos, name="infos"),
-    path("", views.index),
-    path("collection", views.collection, name="collection"),
-    ]

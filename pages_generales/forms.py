@@ -16,3 +16,6 @@ class RechercheInstrument(forms.ModelForm):
         fields = ['nom','ENSP', 'notice']#, 'oral', 'mots_cles']
     def __init__(self, *args, **kwargs):
         super(RechercheInstrument, self).__init__(*args, **kwargs)
+        self.fields['nom'].required = False
+        self.fields['ENSP'].required = False
+        self.fields['notice'].required = False

@@ -1,8 +1,8 @@
 from django.shortcuts import render#,redirect, get_object_or_404
-#from django.http import HttpResponse, Http404
+#from django.http import HttpResponse #, Http404
 
 from .forms import RechercheInstrument
-from .models import Instrument
+from .models import Instrument#, Notice
 
 import config
 
@@ -12,7 +12,6 @@ def candidater(request):
     lien_SU_master = config.lien_SU_master
     lien_P11_magistere = config.lien_P11_magistere
     return render(request, 'candidater.html',locals())
-
 
 def formation(request):
     site_agreg_ext = config.site_agreg_ext
@@ -25,22 +24,36 @@ def formation(request):
 def index(request):
     return render(request, 'index.html',locals())
 
-
 def infos(request):
     lien_SU_master = config.lien_SU_master
     lien_P11_magistere = config.lien_P11_magistere
     return render(request, 'infos.html',locals())
 
-
 def collection(request):
-
-    form = RechercheInstrument(request.POST or None)
-    if form.is_valid():
-        show_results = True
-        nom = form.cleaned_data['nom']
-        ENSP = form.cleaned_data['ENSP']
-        notice = form.cleaned_data['notice']
-        liste_instrument = Instrument.objects.all()
-        
-    # Quoiqu'il arrive, on affiche la page du formulaire.
-    return render(request, 'collection.html',locals())
+    
+#    if (request.GET['id']):
+#        show_results = True
+#        unique_resultat = True
+#        id_instr = int(request.GET['id'])
+#        instrument = Instrument.objects.filter(id=id_instr)
+#        return render(request, 'collection.html?id='.str(id_instr),locals())
+#    
+#    else:
+        form = RechercheInstrument(request.POST or None)
+        if (form and form.is_valid()):
+            show_results = True
+            nom = form.cleaned_data['nom']
+            ENSP = form.cleaned_data['ENSP']
+            notice = form.cleaned_data['notice']
+            liste_instruments = Instrument.objects.all().order_by('ENSP')
+            
+            if (nom):
+                liste_instruments = Instrument.objects.filter(nom__contains=nom)
+            if (ENSP):
+                liste_instruments = Instrument.objects.filter(ENSP__contains=ENSP)
+            if (notice):
+                liste_instruments = Instrument.objects.filter(notice=notice)
+            aumoinsunresultat = True ## A IMPLEMENTER
+            
+        # Quoiqu'il arrive, on affiche la page du formulaire.
+        return render(request, 'collection.html',locals())

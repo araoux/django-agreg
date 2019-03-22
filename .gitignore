@@ -1,8 +1,9 @@
 db.sqlite3
 site_ressources/settings.py
+venv/
+media/
+
 ressources/__pycache__/
 __pycache__
 site_ressources/__pycache__/
 pages_generales/__pycache__/
-venv/
-media/
