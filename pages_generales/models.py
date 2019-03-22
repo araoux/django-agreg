@@ -1,12 +1,13 @@
 from django.db import models
 
 from django.utils import timezone
+from .config import renommage_image, renommage_notice
 # Create your models here.
 
 class Notice(models.Model):
     numero = models.SmallIntegerField()
     nom = models.CharField(max_length=64, blank=True,null=True)
-    fichier = models.FileField(null=True)
+    fichier = models.FileField(null=True,upload_to=renommage_notice)
 
     class Meta:
         verbose_name = "Notice"
@@ -75,7 +76,7 @@ class Instrument(models.Model):
     notice = models.ForeignKey(Notice, on_delete='SET_NULL', null=True, blank=True)
     ref = models.CharField(max_length=64, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
-    image = models.ImageField(blank=True,null=True)
+    image = models.ImageField(blank=True,null=True,upload_to=renommage_image)
     statut = models.ForeignKey(Statut, on_delete='SET_NULL', null=True)
     categorie = models.ForeignKey(Categorie, on_delete='SET_NULL', null=True)
     theme = models.ForeignKey(Theme, on_delete='SET_NULL', null=True, blank=True)
