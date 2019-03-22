@@ -79,13 +79,13 @@ class RessourceImage(Ressource):
         verbose_name_plural = "Ressources - Images"
 
 class RessourceFichier(Ressource):
-    contenu = models.FileField(upload_to="ressources_documents/")
+    contenu = models.FileField(upload_to=renommage)
     class Meta:
         verbose_name = "Ressource - pdf"
         verbose_name_plural = "Ressources - pdf"
 
 class RessourceScript(Ressource):
-    contenu = models.FileField(upload_to="ressources_scripts/")
+    contenu = models.FileField(upload_to=renommage)
     class Meta:
         verbose_name = "Ressource - Script Python"
         verbose_name_plural = "Ressources - Scripts Python"
