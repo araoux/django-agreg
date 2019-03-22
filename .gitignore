@@ -3,4 +3,5 @@ site_ressources/settings.py
 ressources/__pycache__/
 __pycache__
 site_ressources/__pycache__/
+pages_generales/__pycache__/
 /venv
