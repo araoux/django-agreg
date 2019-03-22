@@ -1,8 +1,8 @@
 from django.shortcuts import render#,redirect, get_object_or_404
-#from django.http import HttpResponse, Http404
+#from django.http import HttpResponse #, Http404
 
 from .forms import RechercheInstrument
-from .models import Instrument
+from .models import Instrument#, Notice
 
 import config
 
@@ -40,13 +40,19 @@ def collection(request):
 #    
 #    else:
         form = RechercheInstrument(request.POST or None)
-        if form.is_valid():
+        if (form and form.is_valid()):
             show_results = True
             nom = form.cleaned_data['nom']
             ENSP = form.cleaned_data['ENSP']
             notice = form.cleaned_data['notice']
-            liste_instruments = Instrument.objects.all()
+            liste_instruments = Instrument.objects.all().order_by('ENSP')
             
+            if (nom):
+                liste_instruments = Instrument.objects.filter(nom__contains=nom)
+            if (ENSP):
+                liste_instruments = Instrument.objects.filter(ENSP__contains=ENSP)
+            if (notice):
+                liste_instruments = Instrument.objects.filter(notice=notice)
             aumoinsunresultat = True ## A IMPLEMENTER
             
         # Quoiqu'il arrive, on affiche la page du formulaire.
