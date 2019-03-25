@@ -30,30 +30,30 @@ def infos(request):
     return render(request, 'infos.html',locals())
 
 def collection(request):
+    form = RechercheInstrument(request.POST or None)
+    if (form and form.is_valid()):
+        show_results = True
+        un_seul_instrument = False
+        nom = form.cleaned_data['nom']
+        ENSP = form.cleaned_data['ENSP']
+        notice = form.cleaned_data['notice']
+        liste_instruments = Instrument.objects.all().order_by('ENSP')
+        
+        if (nom):
+            liste_instruments = Instrument.objects.filter(nom__contains=nom)
+        if (ENSP):
+            liste_instruments = Instrument.objects.filter(ENSP__contains=ENSP)
+        if (notice):
+            liste_instruments = Instrument.objects.filter(notice=notice)
+        aumoinsunresultat = True ## A IMPLEMENTER
+        
+    # Quoiqu'il arrive, on affiche la page du formulaire.
+    return render(request, 'collection.html',locals())
+
+def instrument(request, instr_ENSP):
+    instr = Instrument.objects.filter(ENSP=instr_ENSP)[0]#.get(pk=1)
+    aumoinsunresultat = True
+    show_results = True
+    un_seul_instrument = True
     
-#    if (request.GET['id']):
-#        show_results = True
-#        unique_resultat = True
-#        id_instr = int(request.GET['id'])
-#        instrument = Instrument.objects.filter(id=id_instr)
-#        return render(request, 'collection.html?id='.str(id_instr),locals())
-#    
-#    else:
-        form = RechercheInstrument(request.POST or None)
-        if (form and form.is_valid()):
-            show_results = True
-            nom = form.cleaned_data['nom']
-            ENSP = form.cleaned_data['ENSP']
-            notice = form.cleaned_data['notice']
-            liste_instruments = Instrument.objects.all().order_by('ENSP')
-            
-            if (nom):
-                liste_instruments = Instrument.objects.filter(nom__contains=nom)
-            if (ENSP):
-                liste_instruments = Instrument.objects.filter(ENSP__contains=ENSP)
-            if (notice):
-                liste_instruments = Instrument.objects.filter(notice=notice)
-            aumoinsunresultat = True ## A IMPLEMENTER
-            
-        # Quoiqu'il arrive, on affiche la page du formulaire.
-        return render(request, 'collection.html',locals())
+    return render(request, 'collection.html',locals())

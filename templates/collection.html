@@ -1,4 +1,5 @@
 {% extends "squelette.html" %}
+{% load static %}
 {% block title %}Collection de matériel{% endblock %}
 {% block content %}
 
@@ -33,13 +34,41 @@
 {% if show_results %}
 
 {% if not aumoinsunresultat %}
-<h4>Aucun résultat !</h4>
-{% else %}
+<h2 style='text-align:center;'>Aucun résultat !</h2>
 
-    form.cleaned_data={{form.cleaned_data}}<br />
-    filtres = {{filtres}}<br />
-    ENSP={{ENSP}}
-    lisinstruments={{liste_instruments}}<br />
+{% elif un_seul_instrument %}
+<!-- Le seul instrument s'appelle instr -->
+instr = {{instr}}<br />
+instr_ENSP = {{instr_ENSP}}<br />
+lien = {{instr.image.url}}<br />
+lienNotice = {{instr.notice.fichier}}
+
+<h2 style='text-align:center;'>{{ instr.nom }}</h2>
+  <article id='instrument_article'>
+
+  <table id='descr_instrument'>
+    <tr><th>ENSP</th><td>{{ instr.ENSP }}</td></tr>
+    <tr><th>Notice</th><td><a href="{{ instr.notice.fichier.url }}" target='_blank'>{{instr.notice.numero}}</a></td></tr>
+    <tr><th>Rangement</th><td>{{instr.rangee}} &middot; {{instr.colonne}} &middot; {{instr.etagere}}</td></tr><?php }?>
+    <tr><th>Statut</th><td>{{instr.statut}}</td></tr>
+    <tr><th>Référence</th><td>{{instr.reference}}</td></tr>
+    <tr><th>Catégorie</th><td>{{instr.categorie}}</td></tr>
+    <!--<tr><th>Thème</th><td>{{instr.theme}}</td></tr>-->
+    
+  </table>
+  
+  {% if instr.image %}
+      <aside id='img_aside'>
+      <a href="{{ instr.image.url }}"><img src="{{ instr.image.url }}" style='max-height:300px;' /></a>
+      </aside>
+  {% endif %}
+  
+  <p id='descr_p'><strong>Description :</strong><br /><br />{{ instr.description }}</p>
+
+  </article>
+
+
+{% else %}
     <hr>
     <h1>Résultats</h1>
     <article class='center' id='article_resultats_recherche'>
@@ -48,9 +77,9 @@
     <tr><th>Instrument</th><th>Image</th><th>Référence</th><th>ENSP</th><th>Notice</th><th>Rangement</th><th>Statut</th></tr>
     
     {% for instr in liste_instruments %}
-    {{instr.image}}
+    {{instr.image}}<br />
       <tr>
-          <td><a href={% url "collection" %} target='_blank'>{{instr.nom}}</a></td>
+          <td><a href={% url "instrument" instr.ENSP %} target='_blank'>{{instr.nom}}</a></td>
           <td class='center'>{% if instr.image %}<a href="{{ instr.image }}"><img src="{{ instr.image }}" height='80px' /></a>{% else %} / {% endif %}</td>
           <td>{{instr.ref}}</td>
           <td class='center'>{{instr.ENSP}}</td>

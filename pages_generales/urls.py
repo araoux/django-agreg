@@ -8,4 +8,5 @@ urlpatterns = [
     path("infos", views.infos, name="infos"),
     path("", views.index),
     path("collection", views.collection, name="collection"),
+    path("collection/<int:instr_ENSP>", views.instrument, name="instrument"),
     ]
