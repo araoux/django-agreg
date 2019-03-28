@@ -72,6 +72,24 @@ show_results = {{show_results}}<br />
          <td>{% for oral in ressource.oral.all %} {{oral.agreg}} - {{oral.type_oral}} - {{oral.numero}} : {{oral.nom}} <br /> {% endfor %}</td>
     {% endfor %}
 
+    {% for ressource in liste_fichiers %}
+        <tr>
+         <td><a href="{{ ressource.contenu.url }}">{{ ressource.description }}</a></td>
+         <td>{{ressource.discipline}}</td>
+         <td>{{ressource.categorie}}</td>
+         <td>{{ressource.sous_cat}}</td>
+         <td>{% for oral in ressource.oral.all %} {{oral.agreg}} - {{oral.type_oral}} - {{oral.numero}} : {{oral.nom}} <br /> {% endfor %}</td>
+    {% endfor %}
+
+    {% for ressource in liste_scripts %}
+        <tr>
+         <td><a href="{{ ressource.contenu.url }}">{{ ressource.description }}</a></td>
+         <td>{{ressource.discipline}}</td>
+         <td>{{ressource.categorie}}</td>
+         <td>{{ressource.sous_cat}}</td>
+         <td>{% for oral in ressource.oral.all %} {{oral.agreg}} - {{oral.type_oral}} - {{oral.numero}} : {{oral.nom}} <br /> {% endfor %}</td>
+    {% endfor %}
+
     </table>
     </article>
     {% endif %}
