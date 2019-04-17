@@ -97,23 +97,27 @@ show_results = {{show_results}}<br />
 <h2>Polys de TP</h2>
 <article class='center'>
 <table  id="table_TP">
-    <tr><th>Série 1</th><th>Série 2</th><th>Série 3</th></tr>
+    <tr><th>Série 0</th><th>Série 1</th><th>Série 2</th><th>Série 3</th></tr>
     <tr>
+        <td><a href="{% static 'TP/serie0/Optique.pdf' %}">Optique de base</a></td>
         <td><a href="{% static 'TP/serie1/InstrumentsOptique.pdf' %}">Instruments d'optique</a></td>
         <td><a href="{% static 'TP/serie2/Capteurs.pdf' %}">Capteurs</a></td>
         <td><a href="{% static 'TP/serie3/ConversionPuissance.pdf' %}">Conversion de puissance</a></td>
     </tr>
     <tr>
+        <td><a href="{% static 'TP/serie0/Electronique.pdf' %}">Électronique de base</a></td>
         <td><a href="{% static 'TP/serie1/AO.pdf' %}">AO</a></td>
         <td><a href="{% static 'TP/serie2/Interferences.pdf' %}">Interférences</a></td>
         <td><a href="{% static 'TP/serie3/FluidesCapillarite.pdf' %}">Fluides et capillarité</a></td>
     </tr>
     <tr>
+        <td><a href="{% static 'TP/serie0/Informatique.pdf' %}">Informatique</a></td>
         <td><a href="{% static 'TP/serie1/Diffraction.pdf' %}">Diffraction</a></td>
         <td><a href="{% static 'TP/serie2/OndesII.pdf' %}">Ondes II</a></td>
         <td><a href="{% static 'TP/serie3/Moteurs.pdf' %}">Moteurs</a></td>
     </tr>
     <tr>
+        <td rowspan=3></td>
         <td><a href="{% static 'TP/serie1/Magnetisme.pdf' %}">Magnétisme</a></td>
         <td><a href="{% static 'TP/serie2/PolarisationI.pdf' %}">Polarisation I</a></td>
         <td><a href="{% static 'TP/serie3/PhysiqueNonLineaire.pdf' %}">Physique non-linéaire et instabilités</a></td>
@@ -129,11 +133,13 @@ show_results = {{show_results}}<br />
         <td><a href="{% static 'TP/serie3/Spectroscopie.pdf' %}">Spectroscopie</a></td>
     </tr>
     <tr>
+        <th>Extra</th>
         <td><a href="{% static 'TP/serie1/Resonance.pdf' %}">Résonance et oscillateurs couplés</a></td>
         <td><a href="{% static 'TP/serie2/Thermometrie.pdf' %}">Thermométrie</a></td>
         <td><a href="{% static 'TP/serie3/Telecommunications.pdf' %}">Télécommunications</a></td>
     </tr>
     <tr>
+        <td><a href="{% static 'TP/Incertitudes.pdf' %}">Incertitudes</a></td>
         <td><a href="{% static 'TP/serie1/Mecanique.pdf' %}">Mecanique</a></td>
         <td><a href="{% static 'TP/serie2/TransistorsMultimetres.pdf' %}">Transistors Multimètres</a></td>
         <td><a href="{% static 'TP/serie3/TransitionsDePhase.pdf' %}">Transitions de phase</a></td>
