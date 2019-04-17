@@ -161,7 +161,7 @@ th
   padding:5px 5px 5px 5px;
 }
 
-#table_resultats_recherche td, #table_resultats_recherche th, #table_gestion_recherche td, #table_gestion_recherche th, #descr_instrument td, #descr_instrument th, #table_themes td, #table_themes th, #table_categories th, #table_categories td 
+#table_resultats_recherche td, #table_resultats_recherche th, #table_gestion_recherche td, #table_gestion_recherche th, #descr_instrument td, #descr_instrument th, #table_themes td, #table_themes th, #table_categories th, #table_categories td, #table_TP td, #table_TP th
 {
   border: 1px solid black;
   padding:3px 10px 3px 10px;
@@ -188,7 +188,7 @@ th
   width:50%;
 }
 
-.center, #table_themes, #table_categories, #table_ajout_instrument, #organigramme_article, #gestion_table_instrument, #table_organigramme, #table_gestion_recherche, #table_resultats_recherche
+.center, #table_themes, #table_categories, #table_ajout_instrument, #organigramme_article, #gestion_table_instrument, #table_organigramme, #table_gestion_recherche, #table_resultats_recherche, #table_TP
 {
   text-align:center; 
   margin:auto;

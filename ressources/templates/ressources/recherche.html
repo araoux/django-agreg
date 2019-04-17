@@ -36,66 +36,115 @@ show_results = {{show_results}}<br />
 
 {% if show_results %}
     <hr>
-<!--    oral = {{oral}}<br />
-    filtres_definis = {{filtres_definis}}<br />
-    fitlres_mots-cles = {{filtres.mot_cle}}<br />
---> 
     <h1>Résultats</h1>
     
     <article class='center'>
     
     {% if not aumoinsunresultat %}
-    <h4>Aucun résultat !</h4>
+        <h4>Aucun résultat !</h4>
     {% else %}
     
     
-    <table id="table_resultats_recherche">
-      <tr>
-       <th>Ressource</th><th>Discipline</th><th>Catégorie</th><th>Sous-catégorie</th><th>Oraux</th>
-      </tr>
+        <table id="table_resultats_recherche">
+          <tr>
+           <th>Ressource</th><th>Discipline</th><th>Catégorie</th><th>Sous-catégorie</th><th>Oraux</th>
+          </tr>
+        
+        {% for ressource in liste_liens %}
+            <tr>
+             <td><a href="{{ ressource.contenu }}">{{ressource.description}}</a></td>
+             <td>{{ressource.discipline}}</td>
+             <td>{{ressource.categorie}}</td>
+             <td>{{ressource.sous_cat}}</td>
+             <td>{% for oral in ressource.oral.all %} {{oral.agreg}} - {{oral.type_oral}} - {{oral.numero}} : {{oral.nom}} <br /> {% endfor %}</td>
+        {% endfor %}
+        
+        {% for ressource in liste_images %}
+            <tr>
+             <td><a href="{{ ressource.contenu.url }}"><img src="{{ ressource.contenu.url }}" height='200px' /></a></td>
+             <td>{{ressource.discipline}}</td>
+             <td>{{ressource.categorie}}</td>
+             <td>{{ressource.sous_cat}}</td>
+             <td>{% for oral in ressource.oral.all %} {{oral.agreg}} - {{oral.type_oral}} - {{oral.numero}} : {{oral.nom}} <br /> {% endfor %}</td>
+        {% endfor %}
     
-    {% for ressource in liste_liens %}
-        <tr>
-         <td><a href="{{ ressource.contenu }}">{{ressource.description}}</a></td>
-         <td>{{ressource.discipline}}</td>
-         <td>{{ressource.categorie}}</td>
-         <td>{{ressource.sous_cat}}</td>
-         <td>{% for oral in ressource.oral.all %} {{oral.agreg}} - {{oral.type_oral}} - {{oral.numero}} : {{oral.nom}} <br /> {% endfor %}</td>
-    {% endfor %}
+        {% for ressource in liste_fichiers %}
+            <tr>
+             <td><a href="{{ ressource.contenu.url }}">{{ ressource.description }}</a></td>
+             <td>{{ressource.discipline}}</td>
+             <td>{{ressource.categorie}}</td>
+             <td>{{ressource.sous_cat}}</td>
+             <td>{% for oral in ressource.oral.all %} {{oral.agreg}} - {{oral.type_oral}} - {{oral.numero}} : {{oral.nom}} <br /> {% endfor %}</td>
+        {% endfor %}
     
-    {% for ressource in liste_images %}
-        <tr>
-         <td><a href="{{ ressource.contenu.url }}"><img src="{{ ressource.contenu.url }}" height='200px' /></a></td>
-         <td>{{ressource.discipline}}</td>
-         <td>{{ressource.categorie}}</td>
-         <td>{{ressource.sous_cat}}</td>
-         <td>{% for oral in ressource.oral.all %} {{oral.agreg}} - {{oral.type_oral}} - {{oral.numero}} : {{oral.nom}} <br /> {% endfor %}</td>
-    {% endfor %}
-
-    {% for ressource in liste_fichiers %}
-        <tr>
-         <td><a href="{{ ressource.contenu.url }}">{{ ressource.description }}</a></td>
-         <td>{{ressource.discipline}}</td>
-         <td>{{ressource.categorie}}</td>
-         <td>{{ressource.sous_cat}}</td>
-         <td>{% for oral in ressource.oral.all %} {{oral.agreg}} - {{oral.type_oral}} - {{oral.numero}} : {{oral.nom}} <br /> {% endfor %}</td>
-    {% endfor %}
-
-    {% for ressource in liste_scripts %}
-        <tr>
-         <td><a href="{{ ressource.contenu.url }}">{{ ressource.description }}</a></td>
-         <td>{{ressource.discipline}}</td>
-         <td>{{ressource.categorie}}</td>
-         <td>{{ressource.sous_cat}}</td>
-         <td>{% for oral in ressource.oral.all %} {{oral.agreg}} - {{oral.type_oral}} - {{oral.numero}} : {{oral.nom}} <br /> {% endfor %}</td>
-    {% endfor %}
-
-    </table>
-    </article>
+        {% for ressource in liste_scripts %}
+            <tr>
+             <td><a href="{{ ressource.contenu.url }}">{{ ressource.description }}</a></td>
+             <td>{{ressource.discipline}}</td>
+             <td>{{ressource.categorie}}</td>
+             <td>{{ressource.sous_cat}}</td>
+             <td>{% for oral in ressource.oral.all %} {{oral.agreg}} - {{oral.type_oral}} - {{oral.numero}} : {{oral.nom}} <br /> {% endfor %}</td>
+        {% endfor %}
+    
+        </table>
     {% endif %}
-
-
+    </article>
 {% endif %}
+
+
+<h1>Ressources du centre</h1>
+
+<h2>Polys de TP</h2>
+<article class='center'>
+<table  id="table_TP">
+    <tr><th>Série 1</th><th>Série 2</th><th>Série 3</th></tr>
+    <tr>
+        <td><a href="{% static 'TP/serie1/InstrumentsOptique.pdf' %}">Instruments d'optique</a></td>
+        <td><a href="{% static 'TP/serie2/Capteurs.pdf' %}">Capteurs</a></td>
+        <td><a href="{% static 'TP/serie3/ConversionPuissance.pdf' %}">Conversion de puissance</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP/serie1/AO.pdf' %}">AO</a></td>
+        <td><a href="{% static 'TP/serie2/Interferences.pdf' %}">Interférences</a></td>
+        <td><a href="{% static 'TP/serie3/FluidesCapillarite.pdf' %}">Fluides et capillarité</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP/serie1/Diffraction.pdf' %}">Diffraction</a></td>
+        <td><a href="{% static 'TP/serie2/OndesII.pdf' %}">Ondes II</a></td>
+        <td><a href="{% static 'TP/serie3/Moteurs.pdf' %}">Moteurs</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP/serie1/Magnetisme.pdf' %}">Magnétisme</a></td>
+        <td><a href="{% static 'TP/serie2/PolarisationI.pdf' %}">Polarisation I</a></td>
+        <td><a href="{% static 'TP/serie3/PhysiqueNonLineaire.pdf' %}">Physique non-linéaire et instabilités</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP/serie1/OndesI.pdf' %}">Ondes I</a></td>
+        <td><a href="{% static 'TP/serie2/Semiconducteurs.pdf' %}">Semiconducteurs</a></td>
+        <td><a href="{% static 'TP/serie3/PolarisationII.pdf' %}">Polarisation II</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP/serie1/Photorecepteurs.pdf' %}">Photorécepteurs</a></td>
+        <td><a href="{% static 'TP/serie2/SystemesBoucles.pdf' %}">Systèmes bouclés</a></td>
+        <td><a href="{% static 'TP/serie3/Spectroscopie.pdf' %}">Spectroscopie</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP/serie1/Resonance.pdf' %}">Résonance et oscillateurs couplés</a></td>
+        <td><a href="{% static 'TP/serie2/Thermometrie.pdf' %}">Thermométrie</a></td>
+        <td><a href="{% static 'TP/serie3/Telecommunications.pdf' %}">Télécommunications</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP/serie1/Mecanique.pdf' %}">Mecanique</a></td>
+        <td><a href="{% static 'TP/serie2/TransistorsMultimetres.pdf' %}">Transistors Multimètres</a></td>
+        <td><a href="{% static 'TP/serie3/TransitionsDePhase.pdf' %}">Transitions de phase</a></td>
+    </tr>
+</table>
+
+</article>
+
+
+
+
 
 
 {% endblock %}
