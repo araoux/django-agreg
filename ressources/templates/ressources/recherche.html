@@ -30,7 +30,8 @@
 </form>
 </article>
 
-<!--umoinsunresultat = {{aumoinsunresultat}}<br />
+<!-- 
+umoinsunresultat = {{aumoinsunresultat}}<br />
 show_results = {{show_results}}<br />
 -->
 
@@ -43,8 +44,25 @@ show_results = {{show_results}}<br />
     {% if not aumoinsunresultat %}
         <h4>Aucun résultat !</h4>
     {% else %}
+        <ul>
+        {% for ressource in liste_liens %}
+             <li><a href="{{ ressource.contenu }}">{{ressource.description}}</a></li>
+        {% endfor %}
+        
+        {% for ressource in liste_images %}
+             <li><a href="{{ ressource.contenu.url }}"><img src="{{ ressource.contenu.url }}" height='200px' /></a></li>
+        {% endfor %}
     
+        {% for ressource in liste_fichiers %}
+             <li><a href="{{ ressource.contenu.url }}">{{ ressource.description }}</a></li>
+        {% endfor %}
     
+        {% for ressource in liste_scripts %}
+             <li><a href="{{ ressource.contenu.url }}">{{ ressource.description }}</a></li>
+        {% endfor %}
+    
+        </ul>
+<!--
         <table id="table_resultats_recherche">
           <tr>
            <th>Ressource</th><th>Discipline</th><th>Catégorie</th><th>Sous-catégorie</th><th>Oraux</th>
@@ -87,6 +105,7 @@ show_results = {{show_results}}<br />
         {% endfor %}
     
         </table>
+-->
     {% endif %}
     </article>
 {% endif %}
@@ -113,7 +132,13 @@ show_results = {{show_results}}<br />
 <h1>Ressources du centre</h1>
 
 <h2>Scripts Python de Montrouge</h2>
-<p><a href="https://github.com/araoux/python_agregation">Lien de téléchargement</a> (attention, il faut télécharger TOUT le dossier, puisque les scripts utilisent des modules "maison")</p>
+<h3>Protocole pour l'utilisation des scripts</h3>
+<ol>
+ <li>Télécharger l'intégralité de l'archive à l'adresse suivante : <a href="https://github.com/araoux/python_agregation">Lien de téléchargement</a></li>
+ <li>Décompresser l'intégralité du dossier sur l'ordinateur</li>
+ <li>Les scripts sont dans le sous-dossier programmes_lecons.</li>
+</ol>
+<p> Remarque : Afin d'améliorer la lisibilité des scripts, et de faciliter l'écriture de nouveaux scripts, les functions permettant l'affichage correct sont écrits dans des modules séparés. Pour cette raison, il est nécessaire de téléchager toute l'archive.</p>
 
 <h2>Polys de TP des agrégatifs de physique</h2>
 <article class='center'>
