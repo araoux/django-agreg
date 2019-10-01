@@ -3,7 +3,7 @@
 {% block title %}Ressources{% endblock %}
 {% block content %}
 <h1>Recherche de ressources</h1>
-
+<!--
 <article class='recherche'>
 
 <form action={% url "recherche_tous" %} method="post">
@@ -29,6 +29,7 @@
     <input style="display:inline" type="submit" name="RechercheParOral" value="Rechercher" />
 </form>
 </article>
+-->
 
 <!-- 
 umoinsunresultat = {{aumoinsunresultat}}<br />
@@ -39,7 +40,7 @@ show_results = {{show_results}}<br />
     <hr>
     <h1>Résultats</h1>
     
-    <article class='center'>
+    <article>
     
     {% if not aumoinsunresultat %}
         <h4>Aucun résultat !</h4>
