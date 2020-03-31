@@ -161,7 +161,7 @@ th
   padding:5px 5px 5px 5px;
 }
 
-#table_resultats_recherche td, #table_resultats_recherche th, #table_gestion_recherche td, #table_gestion_recherche th, #descr_instrument td, #descr_instrument th, #table_themes td, #table_themes th, #table_categories th, #table_categories td, #table_TP td, #table_TP th
+#table_resultats_recherche td, #table_resultats_recherche th, #table_gestion_recherche td, #table_gestion_recherche th, #descr_instrument td, #descr_instrument th, #table_themes td, #table_themes th, #table_categories th, #table_categories td, #table_TP td, #table_TP th, #table_programmes th, #table_programmes td
 {
   border: 1px solid black;
   padding:3px 10px 3px 10px;
@@ -194,6 +194,11 @@ th
   margin:auto;
 }
 
+#table_programmes
+{
+  text-align:left; 
+  margin:auto;
+}
 #table_gestion_instruments
 {
   width:100%;
