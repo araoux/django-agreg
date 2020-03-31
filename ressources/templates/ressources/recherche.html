@@ -132,31 +132,59 @@ show_results = {{show_results}}<br />
  <li><a href="https://ptable.com/"> Une classification périodique interactive</a></li>
 </ul>
 
-<h2>Programmes des classes du secondaire</h2>
-<h3>Classe de Seconde</h2>
-<ul>
- <li><a href="{% static 'Programmes/2nde_PhysiqueChimie.pdf' %}">Physique-Chimie</a></li>
- <li><a href="{% static 'Programmes/2nde_SciencesNumeriquesTechnologie.pdf' %}"> Sciences numériques et technologie</a></li>
-</ul>
-<h3>Classes de première</h2>
-<ul>
- <li><a href="{% static 'Programmes/1ere_PhysiqueChimie.pdf' %}">Spécialité Physique-Chimie</a></li>
- <li><a href="{% static 'Programmes/1ere_EnseignementScientifique.pdf' %}"> Enseignement Scientifique</a></li>
- <li><a href="{% static 'Programmes/1ere_ST2S.pdf' %}"> ST2S</a></li>
- <li><a href="{% static 'Programmes/1ere_STI2D.pdf' %}"> STI2D</a></li>
- <li><a href="{% static 'Programmes/1ere_STL.pdf' %}"> STL</a></li>
- <li><a href="{% static 'Programmes/1ere_STL_SPCL.pdf' %}"> STL SPCL</a></li>
-</ul>
-<h3>Classes de terminale</h2>
-<ul>
- <li><a href="{% static 'Programmes/Term_PhysiqueChimie.pdf' %}">Spécialité Physique-Chimie</a></li>
- <li><a href="{% static 'Programmes/Term_EnseignementScientifique.pdf' %}"> Enseignement Scientifique</a></li>
- <li><a href="{% static 'Programmes/Term_SpeSI.pdf' %}"> Physique complémentaire pour l'option SI</a></li>
- <li><a href="{% static 'Programmes/Term_ST2S.pdf' %}"> ST2S</a></li>
- <li><a href="{% static 'Programmes/Term_STI2D.pdf' %}"> STI2D</a></li>
- <li><a href="{% static 'Programmes/Term_STL.pdf' %}"> STL</a></li>
- <li><a href="{% static 'Programmes/Term_STL_SPCL.pdf' %}"> STL SPCL</a></li>
-</ul>
+<h2>Programmes des classes du lycée et des CPGE scientifiques</h2>
+<article class='center'>
+<table  id="table_programmes">
+    <tr><th>Seconde</th><th>Première</th><th>Terminale</th><th>CPGE 1</th><th>CPGE 2</th></tr>
+    <tr>
+        <td>
+            <ul>
+            <li><a href="{% static 'Programmes/2nde_PhysiqueChimie.pdf' %}">Physique-Chimie</a></li>
+            <li><a href="{% static 'Programmes/2nde_SciencesNumeriquesTechnologie.pdf' %}"> Sciences numériques et technologie</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+            <li><a href="{% static 'Programmes/1ere_PhysiqueChimie.pdf' %}">Spécialité Physique-Chimie</a></li>
+            <li><a href="{% static 'Programmes/1ere_EnseignementScientifique.pdf' %}"> Enseignement Scientifique</a></li>
+            <li><a href="{% static 'Programmes/1ere_ST2S.pdf' %}"> ST2S</a></li>
+            <li><a href="{% static 'Programmes/1ere_STI2D.pdf' %}"> STI2D</a></li>
+            <li><a href="{% static 'Programmes/1ere_STL.pdf' %}"> STL</a></li>
+            <li><a href="{% static 'Programmes/1ere_STL_SPCL.pdf' %}"> STL SPCL</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+            <li><a href="{% static 'Programmes/Term_PhysiqueChimie.pdf' %}">Spécialité Physique-Chimie</a></li>
+            <li><a href="{% static 'Programmes/Term_EnseignementScientifique.pdf' %}"> Enseignement Scientifique</a></li>
+            <li><a href="{% static 'Programmes/Term_SpeSI.pdf' %}"> Physique complémentaire pour l'option SI</a></li>
+            <li><a href="{% static 'Programmes/Term_ST2S.pdf' %}"> ST2S</a></li>
+            <li><a href="{% static 'Programmes/Term_STI2D.pdf' %}"> STI2D</a></li>
+            <li><a href="{% static 'Programmes/Term_STL.pdf' %}"> STL</a></li>
+            <li><a href="{% static 'Programmes/Term_STL_SPCL.pdf' %}"> STL SPCL</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+            <li><a href="{% static 'Programmes/CPGE1_PCSI_physique.pdf' %}">PCSI physique</a> et <a href="{% static 'Programmes/CPGE1_PCSI_chimie.pdf' %}">PCSI chimie</a></li>
+            <li><a href="{% static 'Programmes/CPGE1_MPSI.pdf' %}">MPSI</a></li>
+            <li><a href="{% static 'Programmes/CPGE1_BCPST.pdf' %}">BCPST</a></li>
+            <li><a href="{% static 'Programmes/CPGE1_PTSI.pdf' %}">PTSI</a></li>
+            <li><a href="{% static 'Programmes/CPGE1_TSI.pdf' %}">TSI</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+            <li><a href="{% static 'Programmes/CPGE2_PC_physique.pdf' %}">PC physique</a> et <a href="{% static 'Programmes/CPGE2_PC_chimie.pdf' %}">PC chimie</a></li>
+            <li><a href="{% static 'Programmes/CPGE2_MP.pdf' %}">MP</a></li>
+            <li><a href="{% static 'Programmes/CPGE2_BCPST.pdf' %}">BCPST</a></li>
+            <li><a href="{% static 'Programmes/CPGE2_PT.pdf' %}">PT</a></li>
+            <li><a href="{% static 'Programmes/CPGE2_TSI.pdf' %}">TSI</a></li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
 <h1>Ressources du centre</h1>
 
 <h2>Scripts Python de Montrouge</h2>
