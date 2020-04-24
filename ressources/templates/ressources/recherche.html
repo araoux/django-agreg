@@ -2,7 +2,284 @@
 {% load static %}
 {% block title %}Ressources{% endblock %}
 {% block content %}
-<h1>Recherche de ressources</h1>
+
+
+<h1>Ressources génériques</h1>
+<article>
+<ul>
+ <li><a href="https://cache.media.eduscol.education.fr/file/Mathematiques/12/7/LyceeGT_ressources_MathPC_Mesure_et_incertitudes_218127.pdf">Document Eduscol sur les mesures et incertitudes</a></li>
+</ul>
+<h2>Physique</h2>
+<ul>
+ <li><a href="http://culturesciencesphysique.ens-lyon.fr/"> Culture science physique</a></li>
+ <li><a href="https://www.rp-photonics.com/encyclopedia.html"> Plein d'infos sur l'optique et notamment sur les lasers</a></li>
+</ul>
+
+<h2>Chimie</h2>
+<ul>
+ <li><a href="https://www.lelementarium.fr/"> Des infos très variées sur chaque élément de la classification</a></li>
+ <li><a href="http://culturesciences.chimie.ens.fr/">Culture science chimie</a></li>
+ <li><a href="http://www.inrs.fr/publications/bdd/fichetox.html">Les fiches de toxicité des produits</a></li>
+ <li><a href="https://ptable.com/"> Une classification périodique interactive</a></li>
+</ul>
+
+<h2>Programmes des classes du lycée et des CPGE scientifiques</h2>
+<article class='center'>
+<table  id="table_programmes">
+    <tr><th>Seconde</th><th>Première</th><th>Terminale</th><th>CPGE 1</th><th>CPGE 2</th></tr>
+    <tr>
+        <td>
+            <ul>
+            <li><a href="{% static 'Programmes/2nde_PhysiqueChimie.pdf' %}">Physique-Chimie</a></li>
+            <li><a href="{% static 'Programmes/2nde_SciencesNumeriquesTechnologie.pdf' %}"> Sciences numériques et technologie</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+            <li><a href="{% static 'Programmes/1ere_PhysiqueChimie.pdf' %}">Spécialité Physique-Chimie</a></li>
+            <li><a href="{% static 'Programmes/1ere_EnseignementScientifique.pdf' %}"> Enseignement Scientifique</a></li>
+            <li><a href="{% static 'Programmes/1ere_ST2S.pdf' %}"> ST2S</a></li>
+            <li><a href="{% static 'Programmes/1ere_STI2D.pdf' %}"> STI2D</a></li>
+            <li><a href="{% static 'Programmes/1ere_STL.pdf' %}"> STL</a></li>
+            <li><a href="{% static 'Programmes/1ere_STL_SPCL.pdf' %}"> STL SPCL</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+            <li><a href="{% static 'Programmes/Term_PhysiqueChimie_2012.pdf' %}">Physique-Chimie Programme 2012</a></li>
+            <li><a href="{% static 'Programmes/Term_PhysiqueChimie.pdf' %}">Spécialité Physique-Chimie</a></li>
+            <li><a href="{% static 'Programmes/Term_EnseignementScientifique.pdf' %}"> Enseignement Scientifique</a></li>
+            <li><a href="{% static 'Programmes/Term_SpeSI.pdf' %}"> Physique pour SI</a></li>
+            <li><a href="{% static 'Programmes/Term_ST2S.pdf' %}"> ST2S</a></li>
+            <li><a href="{% static 'Programmes/Term_STI2D.pdf' %}"> STI2D</a></li>
+            <li><a href="{% static 'Programmes/Term_STL.pdf' %}"> STL</a></li>
+            <li><a href="{% static 'Programmes/Term_STL_SPCL.pdf' %}"> STL SPCL</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+            <li><a href="{% static 'Programmes/CPGE1_PCSI_physique.pdf' %}">PCSI physique</a> et <a href="{% static 'Programmes/CPGE1_PCSI_chimie.pdf' %}">PCSI chimie</a></li>
+            <li><a href="{% static 'Programmes/CPGE1_MPSI.pdf' %}">MPSI</a></li>
+            <li><a href="{% static 'Programmes/CPGE1_BCPST.pdf' %}">BCPST</a></li>
+            <li><a href="{% static 'Programmes/CPGE1_PTSI.pdf' %}">PTSI</a></li>
+            <li><a href="{% static 'Programmes/CPGE1_TSI.pdf' %}">TSI</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+            <li><a href="{% static 'Programmes/CPGE2_PC_physique.pdf' %}">PC physique</a> et <a href="{% static 'Programmes/CPGE2_PC_chimie.pdf' %}">PC chimie</a></li>
+            <li><a href="{% static 'Programmes/CPGE2_MP.pdf' %}">MP</a></li>
+            <li><a href="{% static 'Programmes/CPGE2_BCPST.pdf' %}">BCPST</a></li>
+            <li><a href="{% static 'Programmes/CPGE2_PT.pdf' %}">PT</a></li>
+            <li><a href="{% static 'Programmes/CPGE2_TSI.pdf' %}">TSI</a></li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+</article>
+
+
+<h1>Ressources du centre</h1>
+
+<h2>Scripts Python de Montrouge</h2>
+<article>
+<h3>Protocole pour l'utilisation des scripts</h3>
+<ol>
+ <li>Télécharger l'archive à l'adresse suivante : <a href="https://github.com/araoux/python_agregation">Lien de téléchargement</a></li>
+ <li>Décompresser *l'intégralité* du dossier sur l'ordinateur</li>
+ <li>Les scripts sont dans le sous-dossier programmes_lecons.</li>
+</ol>
+<p> Remarque : Afin d'améliorer la lisibilité des scripts, et de faciliter l'écriture de nouveaux scripts, les fonctions permettant l'affichage correct sont écrits dans des modules séparés. Pour cette raison, il est nécessaire de télécharger toute l'archive.</p>
+</article>
+
+<h2>Polys de TP des agrégatifs de physique</h2>
+<article class='center'>
+<table  id="table_TP">
+    <tr><th>Série 0</th><th>Série 1</th><th>Série 2</th><th>Série 3</th></tr>
+    <tr>
+        <td><a href="{% static 'TP/serie0/Optique.pdf' %}">Optique de base</a></td>
+        <td><a href="{% static 'TP/serie1/InstrumentsOptique.pdf' %}">Instruments d'optique</a></td>
+        <td><a href="{% static 'TP/serie2/Capteurs.pdf' %}">Capteurs</a></td>
+        <td><a href="{% static 'TP/serie3/ConversionPuissance.pdf' %}">Conversion de puissance</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP/serie0/Electronique.pdf' %}">Électronique de base</a></td>
+        <td><a href="{% static 'TP/serie1/AO.pdf' %}">AO</a></td>
+        <td><a href="{% static 'TP/serie2/Interferences.pdf' %}">Interférences</a></td>
+        <td><a href="{% static 'TP/serie3/FluidesCapillarite.pdf' %}">Fluides et capillarité</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP/serie0/Informatique.pdf' %}">Informatique</a></td>
+        <td><a href="{% static 'TP/serie1/Diffraction.pdf' %}">Diffraction</a></td>
+        <td><a href="{% static 'TP/serie2/OndesII.pdf' %}">Ondes II</a></td>
+        <td><a href="{% static 'TP/serie3/Moteurs.pdf' %}">Moteurs</a></td>
+    </tr>
+    <tr>
+        <td rowspan=1></td>
+        <td><a href="{% static 'TP/serie1/Magnetisme.pdf' %}">Magnétisme</a></td>
+        <td><a href="{% static 'TP/serie2/PolarisationI.pdf' %}">Polarisation I</a></td>
+        <td><a href="{% static 'TP/serie3/PhysiqueNonLineaire.pdf' %}">Physique non-linéaire et instabilités</a></td>
+    </tr>
+    <tr>
+        <th>Extra</th>
+        <td><a href="{% static 'TP/serie1/OndesI.pdf' %}">Ondes I</a></td>
+        <td><a href="{% static 'TP/serie2/Semiconducteurs.pdf' %}">Semiconducteurs</a></td>
+        <td><a href="{% static 'TP/serie3/PolarisationII.pdf' %}">Polarisation II</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP/Incertitudes.pdf' %}">Incertitudes</a></td>
+        <td><a href="{% static 'TP/serie1/Photorecepteurs.pdf' %}">Photorécepteurs</a></td>
+        <td><a href="{% static 'TP/serie2/SystemesBoucles.pdf' %}">Systèmes bouclés</a></td>
+        <td><a href="{% static 'TP/serie3/Spectroscopie.pdf' %}">Spectroscopie</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP/AutresExperiences.pdf' %}">Exps absentes des polys</a></td>
+        <td><a href="{% static 'TP/serie1/Resonance.pdf' %}">Résonance et oscillateurs couplés</a></td>
+        <td><a href="{% static 'TP/serie2/Thermometrie.pdf' %}">Thermométrie</a></td>
+        <td><a href="{% static 'TP/serie3/Telecommunications.pdf' %}">Télécommunications</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP/Metaux.pdf' %}">Poly Metaux</a></td>
+        <td><a href="{% static 'TP/serie1/Mecanique.pdf' %}">Mecanique</a></td>
+        <td><a href="{% static 'TP/serie2/TransistorsMultimetres.pdf' %}">Transistors Multimètres</a></td>
+        <td><a href="{% static 'TP/serie3/TransitionsDePhase.pdf' %}">Transitions de phase</a></td>
+    </tr>
+</table>
+</article>
+
+<h2>Polys de TP des agrégatifs de chimie</h2>
+<article class='center'>
+<table  id="table_TP">
+    <tr><th>Série 1</th><th>Série 2</th><th>Série 3</th></tr>
+    <tr>
+        <td><a href="{% static 'TP_chi/serie1/Mecanique.pdf' %}">Mécanique</a></td>
+        <td><a href="{% static 'TP_chi/serie2/Capillarite.pdf' %}">Capillarité</a></td>
+        <td><a href="{% static 'TP_chi/serie3/Fluides.pdf' %}">Fluides</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP_chi/serie1/Electronique.pdf' %}">Électronique</a></td>
+        <td><a href="{% static 'TP_chi/serie2/Filtrage.pdf' %}">Filtrage</a></td>
+        <td><a href="{% static 'TP_chi/serie3/TransmissionInformation.pdf' %}">Transmission de l'information</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP_chi/serie1/Optique.pdf' %}">Optique</a></td>
+        <td><a href="{% static 'TP_chi/serie2/OptiquePhysique.pdf' %}">Optique physique</a></td>
+        <td><a href="{% static 'TP_chi/serie3/Ondes.pdf' %}">Ondes</a></td>
+    </tr>
+    <tr>
+        <td><a href="{% static 'TP_chi/serie1/Thermodynamique.pdf' %}">Thermodynamique</a></td>
+        <td><a href="{% static 'TP_chi/serie2/Oscillateurs.pdf' %}">Oscillateurs et transformations d'énergie</a></td>
+        <td><a href="{% static 'TP_chi/serie3/PhenomenesTransport.pdf' %}">Phénomènes de transport</a></td>
+    </tr>
+</table>
+</article>
+
+
+<h2>Cours et TDs</h2>
+
+<article class='center'>
+<table  id="table_TP">
+    <tr><th>Matière</th><th>Enseignant</th><th>Ressources</th></tr>
+    <tr>
+        <td>Thermodynamique et physique statistique</td>
+        <td>Jules Fillette</td>
+        <td><a href="https://www.eleves.ens.fr/home/fillette/">Énoncés et corrigés</a></td>
+    </tr>
+    <tr>
+        <td>Optique</td>
+        <td>Agnès Maître</td>
+        <td><a href="{% static 'Cours-TD/Maitre/CoursLasers2019.pdf' %}">Cours Lasers</a> et <a href="{% static 'Cours-TD/Maitre/8-Microscopie-1819.pdf' %}">Slides microscopie</a></td>
+    </tr>
+    <tr>
+        <td>Optique</td>
+        <td>Clément Sayrin</td>
+        <td><a href="http://www.lkb.upmc.fr/cqed/teaching/teachingsayrin/">Énoncés et corrigés</a></td>
+    </tr>
+    <tr>
+        <td>Moteurs</td>
+        <td>Jérémy Neveu</td>
+        <td><a href="https://gitlab.in2p3.fr/Jeremy/Moteurs">Cours moteur</a> et <a href="https://gitlab.in2p3.fr/Jeremy/Electronique">Électronique</a></td>
+    </tr>
+    <tr>
+        <td>Mécanique quantique</td>
+        <td>Jean Hare</td>
+        <td><a href="{% static 'Cours-TD/Hare/Cours2019.pdf' %}">Poly du cours</a></td>
+    </tr>
+    <tr>
+        <td>Mécanique quantique</td>
+        <td>Arnaud Raoux</td>
+        <td><a href="http://www.phys.ens.fr/~raoux/enseignement.html">Énoncés des TDs</a></td>
+    </tr>
+    <tr>
+        <td>Mécanique des fluides</td>
+        <td>Marc Rabaud</td>
+        <td><a href="{% static 'Cours-TD/Rabaud/NotesCours_Agreg2019.pdf' %}">Poly du cours</a></td>
+    </tr>
+    <tr>
+        <td>Physique nucléaire</td>
+        <td>Élias Khan</td>
+        <td><a href="{% static 'Cours-TD/Khan/Noyaux2019.pdf' %}">Noyaux, physique nucléaire</a> et <a href="{% static 'Cours-TD/Khan/presentation.pdf' %}">slides</a></td>
+    </tr>
+    <tr>
+        <td>Relativité</td>
+        <td>Laurent Le Guillou</td>
+        <td><a href="http://supernovae.in2p3.fr/~llg/Enseignements/Agregation/Relativite/">Notes de cours</a></td>
+    </tr>
+<!--    <tr>
+        <td>Relativité</td>
+        <td>Laurent Le Guillou</td>
+        <td><a href="http://supernovae.in2p3.fr/~llg/Enseignements/Agregation/Relativite/">Notes de cours</a></td>
+    </tr>-->
+</table>
+</article>
+
+
+<h2>Rapports de M2 thématiques 2018-2019</h2>
+<article>
+
+<div style="text-align:left;">
+<ul>
+  <li><a href="{% static 'DossiersM2/2019_RetrodiffusionCoherente.pdf' %}">Rétrodiffusion cohérente de la lumière</a> (Alexandra D'Arco)</li>
+  <li><a href="{% static 'DossiersM2/2019_UnitesduSI.pdf' %}">Les nouvelles unités du système international</a> (Emmanuelle Poncet)</li>
+  <li><a href="{% static 'DossiersM2/2019_InstabiliteFaraday.pdf' %}">Instabilité de Faraday</a> (Florian Poydenot)</li>
+  <li><a href="{% static 'DossiersM2/2019_Tomographie.pdf' %}">Tomographie par cohérence optique</a> (Gloria Robert)</li>
+  <li><a href="{% static 'DossiersM2/2019_Marees.pdf' %}">Les marées</a> (Guillaume Pages)</li>
+  <li><a href="{% static 'DossiersM2/2019_PincesOptiques.pdf' %}">Manipulation de brins d'ADN par pinces optiques</a> (Hugo Roussille)</li>
+  <li><a href="{% static 'DossiersM2/2019_SingleMoleculesMagnets.pdf' %}">Single Molecules Magnets</a> (Hugo Schatt)</li>
+  <li><a href="{% static 'DossiersM2/2019_RMN.pdf' %}">Résonance magnétique appliquée à la RMN</a> (Jules Fillette)</li>
+  <li><a href="{% static 'DossiersM2/2019_Elastocapillarite.pdf' %}">Élastocapillarité : l'exemple du treuil élastocapillaire</a> (Julien Froustey)</li>
+  <li><a href="{% static 'DossiersM2/2019_Plasma.pdf' %}">dépôt de substance médicale à l’aide d’un plasma </a> (Gloria Bertrand)</li>
+  <li><a href="{% static 'DossiersM2/2019_SantaCruz.pdf' %}">Ressources en eau douce sur l’île de Santa Cruz</a> (Juliette Mansard)</li>
+  <li><a href="{% static 'DossiersM2/2019_TempsDecoherence.pdf' %}">Décohérence d'un circuit supraconducteur</a> (Rémi Armand)</li>
+  <li><a href="{% static 'DossiersM2/2019_Supraconductivite.pdf' %}">Supraconductivité</a> (Léa Chibani)</li>
+  <li><a href="{% static 'DossiersM2/2019_DiffusionBrillouinStimulee.pdf' %}">Diffusion Brillouin stimulée</a> (Lionel Djadaojee)</li>
+  <li><a href="{% static 'DossiersM2/2019_Neutrinos.pdf' %}">Systèmes quantiques à deux niveaux : applications aux neutrinos</a> (Nathan Vaudry)</li>
+  <li><a href="{% static 'DossiersM2/2019_Microfluidique.pdf' %}">Microfluidique</a> (Olivier Choffrut)</li>
+  <li><a href="{% static 'DossiersM2/2019_Etoiles.pdf' %}">Caractérisation des étoiles en astrophysique</a> (Samuel Zouari)</li>
+  <li><a href="{% static 'DossiersM2/2019_Champagne.pdf' %}">Nucléation des bulles de Champagne</a> (Théo Cartier dit Moulin)</li>
+  <li><a href="{% static 'DossiersM2/2019_VieEtoiles.pdf' %}">Cycle de vie des étoiles</a> (Vincent Lusset)</li>
+  <li><a href="{% static 'DossiersM2/2019_DistancesGalaxies.pdf' %}">Mesurer la distance des galaxies lointaines</a> (Vivien Scottez)</li>
+</ul>
+</div>
+
+</article>
+
+<h1>Ressources autres</h1>
+
+<h2>Quelques vidéos</h2>
+<article>
+
+<div style="text-align:left;">
+<ul>
+ <li><a href="http://web.mit.edu/hml/ncfmf.html">Des vieux films de mécanique des fluides</a></li>
+ <li>Interférences d'atomes de Ne (<a href="{% static 'Videos/Shimuzu/92PRA Double-slit interference with ultracold metastable neon atoms_Shimizu.pdf' %}">Shimuzu et al., PR A 46, R17 (1992)</a>) : <a href="{% static 'Videos/Shimuzu/atomes neon_shimuzu_test512_95.wmv' %}">télécharger la vidéo</a></li>
+ <li>Interférences par photons uniques (<a href="{% static 'Videos/Roch/Reprint_EPJD_d05194.pdf' %}">Jacques et al., Eur. Phys. J. D (2005)</a>) : <a href="{% static 'Videos/Roch/Interferences_1photon_Roch.mp4' %}">télécharger la vidéo</a></li>
+</ul>
+
+</div>
+</article>
+
 <!--
 <article class='recherche'>
 
@@ -112,267 +389,6 @@ show_results = {{show_results}}<br />
     {% endif %}
     </article>
 {% endif %}
-
-<h1>Ressources génériques</h1>
-<ul>
- <li><a href="https://cache.media.eduscol.education.fr/file/Mathematiques/12/7/LyceeGT_ressources_MathPC_Mesure_et_incertitudes_218127.pdf">Document Eduscol sur les mesures et incertitudes</a></li>
-</ul>
-<h2>Physique</h2>
-<ul>
- <li><a href="http://web.mit.edu/hml/ncfmf.html">Des vieux films de mécanique des fluides</a></li>
- <li><a href="http://culturesciencesphysique.ens-lyon.fr/"> Culture science physique</a></li>
- <li><a href="https://www.rp-photonics.com/encyclopedia.html"> Plein d'infos sur l'optique et notamment sur les lasers</a></li>
-</ul>
-
-<h2>Chimie</h2>
-<ul>
- <li><a href="https://www.lelementarium.fr/"> Des infos très variées sur chaque élément de la classification</a></li>
- <li><a href="http://culturesciences.chimie.ens.fr/">Culture science chimie</a></li>
- <li><a href="http://www.inrs.fr/publications/bdd/fichetox.html">Les fiches de toxicité des produits</a></li>
- <li><a href="https://ptable.com/"> Une classification périodique interactive</a></li>
-</ul>
-
-<h2>Programmes des classes du lycée et des CPGE scientifiques</h2>
-<article class='center'>
-<table  id="table_programmes">
-    <tr><th>Seconde</th><th>Première</th><th>Terminale</th><th>CPGE 1</th><th>CPGE 2</th></tr>
-    <tr>
-        <td>
-            <ul>
-            <li><a href="{% static 'Programmes/2nde_PhysiqueChimie.pdf' %}">Physique-Chimie</a></li>
-            <li><a href="{% static 'Programmes/2nde_SciencesNumeriquesTechnologie.pdf' %}"> Sciences numériques et technologie</a></li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-            <li><a href="{% static 'Programmes/1ere_PhysiqueChimie.pdf' %}">Spécialité Physique-Chimie</a></li>
-            <li><a href="{% static 'Programmes/1ere_EnseignementScientifique.pdf' %}"> Enseignement Scientifique</a></li>
-            <li><a href="{% static 'Programmes/1ere_ST2S.pdf' %}"> ST2S</a></li>
-            <li><a href="{% static 'Programmes/1ere_STI2D.pdf' %}"> STI2D</a></li>
-            <li><a href="{% static 'Programmes/1ere_STL.pdf' %}"> STL</a></li>
-            <li><a href="{% static 'Programmes/1ere_STL_SPCL.pdf' %}"> STL SPCL</a></li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-            <li><a href="{% static 'Programmes/Term_PhysiqueChimie_2012.pdf' %}">Physique-Chimie Programme 2012</a></li>
-            <li><a href="{% static 'Programmes/Term_PhysiqueChimie.pdf' %}">Spécialité Physique-Chimie</a></li>
-            <li><a href="{% static 'Programmes/Term_EnseignementScientifique.pdf' %}"> Enseignement Scientifique</a></li>
-            <li><a href="{% static 'Programmes/Term_SpeSI.pdf' %}"> Physique pour SI</a></li>
-            <li><a href="{% static 'Programmes/Term_ST2S.pdf' %}"> ST2S</a></li>
-            <li><a href="{% static 'Programmes/Term_STI2D.pdf' %}"> STI2D</a></li>
-            <li><a href="{% static 'Programmes/Term_STL.pdf' %}"> STL</a></li>
-            <li><a href="{% static 'Programmes/Term_STL_SPCL.pdf' %}"> STL SPCL</a></li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-            <li><a href="{% static 'Programmes/CPGE1_PCSI_physique.pdf' %}">PCSI physique</a> et <a href="{% static 'Programmes/CPGE1_PCSI_chimie.pdf' %}">PCSI chimie</a></li>
-            <li><a href="{% static 'Programmes/CPGE1_MPSI.pdf' %}">MPSI</a></li>
-            <li><a href="{% static 'Programmes/CPGE1_BCPST.pdf' %}">BCPST</a></li>
-            <li><a href="{% static 'Programmes/CPGE1_PTSI.pdf' %}">PTSI</a></li>
-            <li><a href="{% static 'Programmes/CPGE1_TSI.pdf' %}">TSI</a></li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-            <li><a href="{% static 'Programmes/CPGE2_PC_physique.pdf' %}">PC physique</a> et <a href="{% static 'Programmes/CPGE2_PC_chimie.pdf' %}">PC chimie</a></li>
-            <li><a href="{% static 'Programmes/CPGE2_MP.pdf' %}">MP</a></li>
-            <li><a href="{% static 'Programmes/CPGE2_BCPST.pdf' %}">BCPST</a></li>
-            <li><a href="{% static 'Programmes/CPGE2_PT.pdf' %}">PT</a></li>
-            <li><a href="{% static 'Programmes/CPGE2_TSI.pdf' %}">TSI</a></li>
-            </ul>
-        </td>
-    </tr>
-</table>
-
-<h1>Ressources du centre</h1>
-
-<h2>Scripts Python de Montrouge</h2>
-<h3>Protocole pour l'utilisation des scripts</h3>
-<ol>
- <li>Télécharger l'archive à l'adresse suivante : <a href="https://github.com/araoux/python_agregation">Lien de téléchargement</a></li>
- <li>Décompresser *l'intégralité* du dossier sur l'ordinateur</li>
- <li>Les scripts sont dans le sous-dossier programmes_lecons.</li>
-</ol>
-<p> Remarque : Afin d'améliorer la lisibilité des scripts, et de faciliter l'écriture de nouveaux scripts, les fonctions permettant l'affichage correct sont écrits dans des modules séparés. Pour cette raison, il est nécessaire de télécharger toute l'archive.</p>
-
-<h2>Polys de TP des agrégatifs de physique</h2>
-<article class='center'>
-<table  id="table_TP">
-    <tr><th>Série 0</th><th>Série 1</th><th>Série 2</th><th>Série 3</th></tr>
-    <tr>
-        <td><a href="{% static 'TP/serie0/Optique.pdf' %}">Optique de base</a></td>
-        <td><a href="{% static 'TP/serie1/InstrumentsOptique.pdf' %}">Instruments d'optique</a></td>
-        <td><a href="{% static 'TP/serie2/Capteurs.pdf' %}">Capteurs</a></td>
-        <td><a href="{% static 'TP/serie3/ConversionPuissance.pdf' %}">Conversion de puissance</a></td>
-    </tr>
-    <tr>
-        <td><a href="{% static 'TP/serie0/Electronique.pdf' %}">Électronique de base</a></td>
-        <td><a href="{% static 'TP/serie1/AO.pdf' %}">AO</a></td>
-        <td><a href="{% static 'TP/serie2/Interferences.pdf' %}">Interférences</a></td>
-        <td><a href="{% static 'TP/serie3/FluidesCapillarite.pdf' %}">Fluides et capillarité</a></td>
-    </tr>
-    <tr>
-        <td><a href="{% static 'TP/serie0/Informatique.pdf' %}">Informatique</a></td>
-        <td><a href="{% static 'TP/serie1/Diffraction.pdf' %}">Diffraction</a></td>
-        <td><a href="{% static 'TP/serie2/OndesII.pdf' %}">Ondes II</a></td>
-        <td><a href="{% static 'TP/serie3/Moteurs.pdf' %}">Moteurs</a></td>
-    </tr>
-    <tr>
-        <td rowspan=1></td>
-        <td><a href="{% static 'TP/serie1/Magnetisme.pdf' %}">Magnétisme</a></td>
-        <td><a href="{% static 'TP/serie2/PolarisationI.pdf' %}">Polarisation I</a></td>
-        <td><a href="{% static 'TP/serie3/PhysiqueNonLineaire.pdf' %}">Physique non-linéaire et instabilités</a></td>
-    </tr>
-    <tr>
-        <th>Extra</th>
-        <td><a href="{% static 'TP/serie1/OndesI.pdf' %}">Ondes I</a></td>
-        <td><a href="{% static 'TP/serie2/Semiconducteurs.pdf' %}">Semiconducteurs</a></td>
-        <td><a href="{% static 'TP/serie3/PolarisationII.pdf' %}">Polarisation II</a></td>
-    </tr>
-    <tr>
-        <td><a href="{% static 'TP/Incertitudes.pdf' %}">Incertitudes</a></td>
-        <td><a href="{% static 'TP/serie1/Photorecepteurs.pdf' %}">Photorécepteurs</a></td>
-        <td><a href="{% static 'TP/serie2/SystemesBoucles.pdf' %}">Systèmes bouclés</a></td>
-        <td><a href="{% static 'TP/serie3/Spectroscopie.pdf' %}">Spectroscopie</a></td>
-    </tr>
-    <tr>
-        <td><a href="{% static 'TP/AutresExperiences.pdf' %}">Exps absentes des polys</a></td>
-        <td><a href="{% static 'TP/serie1/Resonance.pdf' %}">Résonance et oscillateurs couplés</a></td>
-        <td><a href="{% static 'TP/serie2/Thermometrie.pdf' %}">Thermométrie</a></td>
-        <td><a href="{% static 'TP/serie3/Telecommunications.pdf' %}">Télécommunications</a></td>
-    </tr>
-    <tr>
-        <td><a href="{% static 'TP/Metaux.pdf' %}">Poly Metaux</a></td>
-        <td><a href="{% static 'TP/serie1/Mecanique.pdf' %}">Mecanique</a></td>
-        <td><a href="{% static 'TP/serie2/TransistorsMultimetres.pdf' %}">Transistors Multimètres</a></td>
-        <td><a href="{% static 'TP/serie3/TransitionsDePhase.pdf' %}">Transitions de phase</a></td>
-    </tr>
-</table>
-</article>
-
-<h2>Polys de TP des agrégatifs de chimie</h2>
-<article class='center'>
-<table  id="table_TP">
-    <tr><th>Série 1</th><th>Série 2</th><th>Série 3</th></tr>
-    <tr>
-        <td><a href="{% static 'TP_chi/serie1/Mecanique.pdf' %}">Mécanique</a></td>
-        <td><a href="{% static 'TP_chi/serie2/Capillarite.pdf' %}">Capillarité</a></td>
-        <td><a href="{% static 'TP_chi/serie3/Fluides.pdf' %}">Fluides</a></td>
-    </tr>
-    <tr>
-        <td><a href="{% static 'TP_chi/serie1/Electronique.pdf' %}">Électronique</a></td>
-        <td><a href="{% static 'TP_chi/serie2/Filtrage.pdf' %}">Filtrage</a></td>
-        <td><a href="{% static 'TP_chi/serie3/TransmissionInformation.pdf' %}">Transmission de l'information</a></td>
-    </tr>
-    <tr>
-        <td><a href="{% static 'TP_chi/serie1/Optique.pdf' %}">Optique</a></td>
-        <td><a href="{% static 'TP_chi/serie2/OptiquePhysique.pdf' %}">Optique physique</a></td>
-        <td><a href="{% static 'TP_chi/serie3/Ondes.pdf' %}">Ondes</a></td>
-    </tr>
-    <tr>
-        <td><a href="{% static 'TP_chi/serie1/Thermodynamique.pdf' %}">Thermodynamique</a></td>
-        <td><a href="{% static 'TP_chi/serie2/Oscillateurs.pdf' %}">Oscillateurs et transformations d'énergie</a></td>
-        <td><a href="{% static 'TP_chi/serie3/PhenomenesTransport.pdf' %}">Phénomènes de transport</a></td>
-    </tr>
-</table>
-
-<h2>Quelques vidéos</h2>
-<div style="text-align:left;">
-<ul>
-  <li>Interférences d'atomes de Ne (<a href="{% static 'Videos/Shimuzu/92PRA Double-slit interference with ultracold metastable neon atoms_Shimizu.pdf' %}">Shimuzu et al., PR A 46, R17 (1992)</a>) : <a href="{% static 'Videos/Shimuzu/atomes neon_shimuzu_test512_95.wmv' %}">télécharger la vidéo</a></li>
-  <li>Interférences par photons uniques (<a href="{% static 'Videos/Roch/Reprint_EPJD_d05194.pdf' %}">Jacques et al., Eur. Phys. J. D (2005)</a>) : <a href="{% static 'Videos/Roch/Interferences_1photon_Roch.mp4' %}">télécharger la vidéo</a></li>
-</ul>
-
-</div>
-
-<h2>Cours et TDs</h2>
-
-<table  id="table_TP">
-    <tr><th>Matière</th><th>Enseignant</th><th>Ressources</th></tr>
-    <tr>
-        <td>Thermodynamique et physique statistique</td>
-        <td>Jules Fillette</td>
-        <td><a href="https://www.eleves.ens.fr/home/fillette/">Énoncés et corrigés</a></td>
-    </tr>
-    <tr>
-        <td>Optique</td>
-        <td>Agnès Maître</td>
-        <td><a href="{% static 'Cours-TD/Maitre/CoursLasers2019.pdf' %}">Cours Lasers</a> et <a href="{% static 'Cours-TD/Maitre/8-Microscopie-1819.pdf' %}">Slides microscopie</a></td>
-    </tr>
-    <tr>
-        <td>Optique</td>
-        <td>Clément Sayrin</td>
-        <td><a href="http://www.lkb.upmc.fr/cqed/teaching/teachingsayrin/">Énoncés et corrigés</a></td>
-    </tr>
-    <tr>
-        <td>Moteurs</td>
-        <td>Jérémy Neveu</td>
-        <td><a href="https://gitlab.in2p3.fr/Jeremy/Moteurs">Cours moteur</a> et <a href="https://gitlab.in2p3.fr/Jeremy/Electronique">Électronique</a></td>
-    </tr>
-    <tr>
-        <td>Mécanique quantique</td>
-        <td>Jean Hare</td>
-        <td><a href="{% static 'Cours-TD/Hare/Cours2019.pdf' %}">Poly du cours</a></td>
-    </tr>
-    <tr>
-        <td>Mécanique quantique</td>
-        <td>Arnaud Raoux</td>
-        <td><a href="http://www.phys.ens.fr/~raoux/enseignement.html">Énoncés des TDs</a></td>
-    </tr>
-    <tr>
-        <td>Mécanique des fluides</td>
-        <td>Marc Rabaud</td>
-        <td><a href="{% static 'Cours-TD/Rabaud/NotesCours_Agreg2019.pdf' %}">Poly du cours</a></td>
-    </tr>
-    <tr>
-        <td>Physique nucléaire</td>
-        <td>Élias Khan</td>
-        <td><a href="{% static 'Cours-TD/Khan/Noyaux2019.pdf' %}">Noyaux, physique nucléaire</a> et <a href="{% static 'Cours-TD/Khan/presentation.pdf' %}">slides</a></td>
-    </tr>
-    <tr>
-        <td>Relativité</td>
-        <td>Laurent Le Guillou</td>
-        <td><a href="http://supernovae.in2p3.fr/~llg/Enseignements/Agregation/Relativite/">Notes de cours</a></td>
-    </tr>
-<!--    <tr>
-        <td>Relativité</td>
-        <td>Laurent Le Guillou</td>
-        <td><a href="http://supernovae.in2p3.fr/~llg/Enseignements/Agregation/Relativite/">Notes de cours</a></td>
-    </tr>-->
-</table>
-
-
-<h2>Rapports de M2 thématiques 2018-2019</h2>
-<div style="text-align:left;">
-<ul>
-  <li><a href="{% static 'DossiersM2/2019_RetrodiffusionCoherente.pdf' %}">Rétrodiffusion cohérente de la lumière</a> (Alexandra D'Arco)</li>
-  <li><a href="{% static 'DossiersM2/2019_UnitesduSI.pdf' %}">Les nouvelles unités du système international</a> (Emmanuelle Poncet)</li>
-  <li><a href="{% static 'DossiersM2/2019_InstabiliteFaraday.pdf' %}">Instabilité de Faraday</a> (Florian Poydenot)</li>
-  <li><a href="{% static 'DossiersM2/2019_Tomographie.pdf' %}">Tomographie par cohérence optique</a> (Gloria Robert)</li>
-  <li><a href="{% static 'DossiersM2/2019_Marees.pdf' %}">Les marées</a> (Guillaume Pages)</li>
-  <li><a href="{% static 'DossiersM2/2019_PincesOptiques.pdf' %}">Manipulation de brins d'ADN par pinces optiques</a> (Hugo Roussille)</li>
-  <li><a href="{% static 'DossiersM2/2019_SingleMoleculesMagnets.pdf' %}">Single Molecules Magnets</a> (Hugo Schatt)</li>
-  <li><a href="{% static 'DossiersM2/2019_RMN.pdf' %}">Résonance magnétique appliquée à la RMN</a> (Jules Fillette)</li>
-  <li><a href="{% static 'DossiersM2/2019_Elastocapillarite.pdf' %}">Élastocapillarité : l'exemple du treuil élastocapillaire</a> (Julien Froustey)</li>
-  <li><a href="{% static 'DossiersM2/2019_Plasma.pdf' %}">dépôt de substance médicale à l’aide d’un plasma </a> (Gloria Bertrand)</li>
-  <li><a href="{% static 'DossiersM2/2019_SantaCruz.pdf' %}">Ressources en eau douce sur l’île de Santa Cruz</a> (Juliette Mansard)</li>
-  <li><a href="{% static 'DossiersM2/2019_TempsDecoherence.pdf' %}">Décohérence d'un circuit supraconducteur</a> (Rémi Armand)</li>
-  <li><a href="{% static 'DossiersM2/2019_Supraconductivite.pdf' %}">Supraconductivité</a> (Léa Chibani)</li>
-  <li><a href="{% static 'DossiersM2/2019_DiffusionBrillouinStimulee.pdf' %}">Diffusion Brillouin stimulée</a> (Lionel Djadaojee)</li>
-  <li><a href="{% static 'DossiersM2/2019_Neutrinos.pdf' %}">Systèmes quantiques à deux niveaux : applications aux neutrinos</a> (Nathan Vaudry)</li>
-  <li><a href="{% static 'DossiersM2/2019_Microfluidique.pdf' %}">Microfluidique</a> (Olivier Choffrut)</li>
-  <li><a href="{% static 'DossiersM2/2019_Etoiles.pdf' %}">Caractérisation des étoiles en astrophysique</a> (Samuel Zouari)</li>
-  <li><a href="{% static 'DossiersM2/2019_Champagne.pdf' %}">Nucléation des bulles de Champagne</a> (Théo Cartier dit Moulin)</li>
-  <li><a href="{% static 'DossiersM2/2019_VieEtoiles.pdf' %}">Cycle de vie des étoiles</a> (Vincent Lusset)</li>
-  <li><a href="{% static 'DossiersM2/2019_DistancesGalaxies.pdf' %}">Mesurer la distance des galaxies lointaines</a> (Vivien Scottez)</li>
-</ul>
-</div>
-
-</article>
-
-
 
 
 
