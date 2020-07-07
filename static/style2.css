@@ -345,6 +345,8 @@ input:active
   text-align:right;
   padding:3px 0px 3px 0px;
 }
+#histo_g_2020{width:94%;}
+#histo_g_2020_spe{width:60%;}
 #histo_g_2019{width:82%;}
 #histo_g_2019_spe{width:75%;}
 #histo_g_2018_spe{width:25%;}
@@ -356,6 +358,8 @@ input:active
 #histo_g_2014{width:50%;}
 #histo_g_2013{width:80%;}
 
+#histo_d_2020{width:6%;}
+#histo_d_2020_spe{width:40%}
 #histo_d_2019{width:18%;}
 #histo_d_2019_spe{width:25%}
 #histo_d_2018_spe{width:75%}
