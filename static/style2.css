@@ -360,7 +360,7 @@ input:active
 #histo_g_2014{width:50%;}
 #histo_g_2013{width:80%;}
 
-#histo_d_2021{width:25%;}
+#histo_d_2021{width:25%; background-color:#66CCFF;}
 #histo_d_2021_spe{width:0%;}
 #histo_d_2020{width:10%;}
 #histo_d_2020_spe{width:33%}
