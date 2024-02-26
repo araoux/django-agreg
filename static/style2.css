@@ -17,7 +17,7 @@ header
 #bandeau_div
 {
   padding:10px 0px 10px 0px;
-}7
+}
 
 #titre_div
 {
@@ -33,7 +33,7 @@ header
 .logo_div
 {
   display:inline-block;
-  width:24%;
+  width:20%;
 }
 
 .logo
@@ -132,7 +132,7 @@ footer
 
 #infos_div
 {
-  width:70%;
+  width:50%;
   margin:auto;
   border:2px solid #1e90ff;
   padding:2%;
