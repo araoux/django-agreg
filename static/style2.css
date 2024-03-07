@@ -426,8 +426,8 @@ input:active
   text-align:center;
 }
 
-#table_epreuves_spe
-#table_epreuves,
+
+#table_epreuves, #table_epreuves_spe
 {
   display:inline-block;
   width:30%;
